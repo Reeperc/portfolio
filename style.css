@@ -1,0 +1,192 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #111827; /* Dark background */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #000; /* Text color */
+    background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.input-field::placeholder {
+    color: #888; /* Placeholder text color */
+}
+
+.input-field:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.file-input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.file-input-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.file-input-btn:hover {
+    background-color: #0056b3;
+}
+
+#file-chosen {
+    font-size: 16px;
+    color: #c5ffff; /* Text color for selected file name */
+}
+
+.btn-submit {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #218838;
+}
+
+.btn-submit:active {
+    background-color: #1e7e34;
+}
+
+.btn-submit:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .text-2xl {
+        font-size: 1.5rem;
+    }
+    .text-3xl {
+        font-size: 2rem;
+    }
+    .text-4xl {
+        font-size: 2.5rem;
+    }
+    .text-5xl {
+        font-size: 3rem;
+    }
+    .py-10 {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .py-20 {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+    .mb-6 {
+        margin-bottom: 1.5rem;
+    }
+    .mb-12 {
+        margin-bottom: 3rem;
+    }
+    .container {
+        padding: 0 15px;
+    }
+}
+
+
+.bg-whitee {
+    --tw-bg-opacity: 1;
+    background-color: rgba(255,255,255,0);
+  }
+
+  .to-purple-500 {
+    --tw-gradient-to: #952fe3;
+  }
+  .from-indigo-500 {
+    --tw-gradient-from: #1d3bff;
+    --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to, rgba(99, 102, 241, 0));
+  }
+
+  .to-indigo-500 {
+    --tw-gradient-to: #0037ff;
+  }
+  .from-purple-500 {
+    --tw-gradient-from: #1de251;
+    --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to, rgba(139, 92, 246, 0));
+  }
+
+  /* section 'skills' */
+  section {
+    padding: 2rem 1rem;
+}
+
+.skill-card {
+    background-color: #1f2937; /* Darker background */
+    border: 1px solid #2d3748; /* Border color */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+    flex: 1 1 45%; /* Flex basis with shrink and grow */
+    min-width: 280px;
+    max-width: 600px;
+}
+
+.skill-item {
+    background-color: #2d3748;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.skill-item:hover {
+    background-color: #4a5568;
+}
+
+@media (max-width: 768px) {
+    .skill-card {
+        flex-basis: 100%;
+    }
+    .space-x-4 {
+        --tw-space-x-reverse: 0;
+        margin-right: calc(1rem * var(--tw-space-x-reverse));
+        margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+    }
+    .space-y-4 > :not([hidden]) ~ :not([hidden]) {
+        --tw-space-y-reverse: 0;
+        margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+    }
+}
