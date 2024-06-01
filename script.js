@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         emailjs.sendForm('service_3bombh4', 'template_ggu56mr', form) // Remplacez par votre Service ID et Template ID
             .then(function() {
-                alert("Message envoyé ! Nous vous répondrons bientôt.");
+                alert("Message sent !");
             }, function(error) {
-                alert("Échec de l'envoi du message : " + JSON.stringify(error));
+                alert("Fail to send message : " + JSON.stringify(error));
             });
     });
 

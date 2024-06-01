@@ -10,6 +10,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.6/lottie.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
        (function(){
@@ -17,113 +18,327 @@
        })();
     </script>
 </head>
+
 <body class="bg-gray-900 text-white">
     <header class="bg-gradient-to-r from-purple-500 to-indigo-500 p-4 md:p-6">
         <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <a href="#" class="text-2xl md:text-3xl font-bold">Portfolio</a>
             <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
-                <li><a href="#about" class="hover:text-yellow-300">À propos</a></li>
+                <li><a href="#profile" class="hover:text-yellow-300">About me</a></li>
                 <li><a href="#projects" class="hover:text-yellow-300">Projets</a></li>
                 <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
             </ul>
         </nav>
         <div class="container mx-auto text-center py-10 md:py-20">
-            <h1 class="text-4xl md:text-5xl font-extrabold" id="hero-title">Bienvenue sur mon portfolio</h1>
-            <p class="text-xl md:text-2xl mt-4" id="hero-subtitle">Je m'appelle Taher KARIMDJEE. 
+            <h1 class="text-4xl md:text-6xl font-extrabold" id="hero-title">Welcome to my portfolio</h1>
+            <p class="text-xl md:text-5xl mt-4" id="hero-subtitle">Hello! I'm Taher 
             </p>
             <div id="lottie-animation" class="w-32 h-32 md:w-48 md:h-48 mx-auto mt-8"></div>
         </div>
     </header>
 
-    <section id="about" class="container mx-auto py-10 md:py-20">
+    <!-- <section id="about" class="container mx-auto py-10 md:py-20">
         <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 md:mb-12" data-aos="fade-up">À propos de moi</h2>
         <div class="flex flex-col md:flex-row justify-center items-center">
             <img src="images/moi2.jpg" alt="Profile Picture" class="rounded-full w-24 h-24 md:w-32 md:h-32 shadow-lg mb-6 md:mb-0" data-aos="fade-right">
             <p class="text-lg md:text-xl ml-0 md:ml-8" data-aos="fade-left">
-                J'ai 22 ans et suis de nationalité française. Je suis actuellement en Bac+4 et mon objectif est de devenir ingénieur en cybersécurité.
-                Je suis étudiant à l'ESIGELEC Rouen. Je recherche un stage technicien dans ce domaine ainsi qu'un contrat de professionalisation de 12 mois.
+                I am 22 years old and a French national. Currently, I am a fourth-year student at ESIGELEC Rouen, specializing in network and IoT cybersecurity. My goal is to become a cybersecurity engineer.
+            </p>
+            <p class="text-lg md:text-xl ml-0 md:ml-8" data-aos="fade-left">
+                Passionate about cybersecurity, I have strong skills in protecting networks and IoT devices from cyber threats. I am currently seeking a technician internship in this field, as well as a 12-month professionalization contract to apply my knowledge and contribute to innovative projects.
+            </p>
+            <p class="text-lg md:text-xl ml-0 md:ml-8" data-aos="fade-left">
+                My academic journey and projects have allowed me to acquire expertise in network security management, programming, and risk management. I am determined, meticulous, and always looking for new opportunities to improve my skills and help companies secure their infrastructures.
+            </p>
+        </div>
+    </section> -->
+    
 
-                Je suis spécialisé en cybersécurité des réseaux et de l'IoT.</p>
+    <section id="profile" class="container mx-auto py-10 md:py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                <img src="images/moi2.jpg" alt="Profile Photo" class="rounded-full mx-auto w-3/4 md:w-full shadow-lg">
+            </div>
+            <div class="w-full md:w-2/3 text-left md:pl-10">
+                <h2 class="text-3xl md:text-4xl font-bold text-yellownot-300 mb-6 md:mb-12 text-center md:text-left">About me</h2>
+                <p class="text-lg md:text-xl text-whitee-300 mb-4">
+                    French student and 22 years old. Currently, I am a fourth-year student at ESIGELEC Rouen, specializing in network and IoT cybersecurity. My goal is to become a cybersecurity engineer.
+                </p>
+                <p class="text-lg md:text-xl text-whitee-300 mb-4">
+                    Passionate about cybersecurity, I have strong skills in protecting networks and IoT devices from cyber threats. I am currently seeking a technician internship in this field, as well as a 12-month professionalization contract to apply my knowledge and contribute to innovative projects.
+                </p>
+                <p class="text-lg md:text-xl text-whitee-300 mb-4">
+                    My academic journey and projects have allowed me to acquire expertise in network security management, programming, and risk management. I am determined, meticulous, and always looking for new opportunities to improve my skills and help companies secure their infrastructures.
+                </p>
+            </div>
         </div>
     </section>
+    
+
+    <!-- <section id="profile" class="bg-gray-800 py-10 md:py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-6 md:mb-12">Profile</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-4">
+                I am 22 years old and a French national. Currently, I am a fourth-year student at ESIGELEC Rouen, specializing in network and IoT cybersecurity. My goal is to become a cybersecurity engineer.
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 mb-4">
+                Passionate about cybersecurity, I have strong skills in protecting networks and IoT devices from cyber threats. I am currently seeking a technician internship in this field, as well as a 12-month professionalization contract to apply my knowledge and contribute to innovative projects.
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 mb-4">
+                My academic journey and projects have allowed me to acquire expertise in network security management, programming, and risk management. I am determined, meticulous, and always looking for new opportunities to improve my skills and help companies secure their infrastructures.
+            </p>
+        </div>
+    </section> -->
+    
 
     <section id="projects" class="bg-gray-800 py-10 md:py-20">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-yellow-300 mb-6 md:mb-12" data-aos="fade-up">Projets</h2>
+        
         <div class="flex flex-wrap justify-center">
-            <!-- Projet d'Architecture Réseau -->
+            <!-- Network Architecture Project -->
             <div class="project-card m-4 p-6 bg-gray-700 rounded-lg shadow-lg text-left transform transition-transform hover:scale-105" data-aos="fade-up">
-                <h3 class="text-2xl font-bold mb-4 text-blue-400">Projet d'Architecture Réseau</h3>
-                <p class="mb-4">Projet réalisé en fin de 4e année d'école d'ingénieur</p>
-                <p class="mb-4">Mise en place d'un réseau local sécurisé pour un championnat de jeu utilisant la méthodologie SCRUM.</p>
-                <button class="details-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="toggleDetails(this)">Détails</button>
+                <h3 class="text-2xl font-bold mb-4 text-blue-400">Network Architecture Project</h3>
+                <p class="mb-4">Project completed at the end of the 4th year of engineering school</p>
+                <p class="mb-4">Set up a secure local network for a gaming championship using the SCRUM methodology.</p>
+                <button class="details-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="toggleDetails(this)">Details</button>
                 <div class="project-details mt-4 hidden">
-                    <h4 class="text-xl font-bold mb-2">Descriptif du projet</h4>
+                    <h4 class="text-xl font-bold mb-2">Project Description</h4>
                     <ul class="list-disc list-inside mb-4">
-                        <li>Mettre en place l’infrastructure réseau et système</li>
-                        <li>Mettre en place la sécurité du réseau (répartition et segmentation de l'adresse IP de classe C 195.221.X.0 en 3 sous-réseaux)</li>
-                        <li>Développer des scripts pour le lancement des compétitions à distance</li>
+                        <li>Set up the network and system infrastructure</li>
+                        <li>Implement network security (distribution and segmentation of the class C IP address 195.221.X.0 into 3 subnets)</li>
+                        <li>Develop scripts for remote competition launches</li>
                     </ul>
-                    <h4 class="text-xl font-bold mb-2">Solution proposée</h4>
-                    <h5 class="text-lg font-bold mb-1">Partie réseau :</h5>
+                    <h4 class="text-xl font-bold mb-2">Proposed Solution</h4>
+                    <h5 class="text-lg font-bold mb-1">Network Part:</h5>
                     <ul class="list-disc list-inside mb-4">
-                        <li>Un routeur pour interconnecter la ville au reste du monde</li>
-                        <li>Un plan d’adressage IP</li>
-                        <li>Une sauvegarde de la configuration sur un serveur</li>
-                        <li>Sécurisation des flux LAN</li>
+                        <li>A router to interconnect the city with the rest of the world</li>
+                        <li>An IP addressing plan</li>
+                        <li>A backup of the configuration on a server</li>
+                        <li>LAN traffic security</li>
                     </ul>
-                    <h5 class="text-lg font-bold mb-1">Partie système :</h5>
+                    <h5 class="text-lg font-bold mb-1">System Part:</h5>
                     <ul class="list-disc list-inside mb-4">
-                        <li>Un serveur web pour l’affichage des scores et le lancement des parties</li>
-                        <li>Un serveur de mail et une webmail pour les messages des rendez-vous</li>
-                        <li>Deux serveurs DNS (Linux et Windows) pour la résolution de noms DMZ et Trusted</li>
-                        <li>Un serveur d’annuaire Active Directory pour authentifier les joueurs</li>
+                        <li>A web server for displaying scores and launching games</li>
+                        <li>A mail server and a webmail for appointment messages</li>
+                        <li>Two DNS servers (Linux and Windows) for resolving DMZ and Trusted names</li>
+                        <li>An Active Directory directory server to authenticate players</li>
                     </ul>
-                    <h5 class="text-lg font-bold mb-1">Gestion des matchs :</h5>
+                    <h5 class="text-lg font-bold mb-1">Match Management:</h5>
                     <ul class="list-disc list-inside mb-4">
-                        <li>Une interface web sécurisée pour l’affichage des résultats (protection par login/mot de passe de l’annuaire)</li>
-                        <li>Possibilité de lancer un serveur pour accueillir une compétition (Administrateur)</li>
-                        <li>Pour éviter la triche, le joueur devra avoir devant son écran, le jeu, et uniquement le jeu</li>
+                        <li>A secure web interface for displaying results (protected by directory login/password)</li>
+                        <li>The ability to launch a server to host a competition (Administrator)</li>
+                        <li>To prevent cheating, the player must have the game and only the game on their screen</li>
                     </ul>
-                    <h4 class="text-xl font-bold mb-2">Livrables</h4>
+                    <h4 class="text-xl font-bold mb-2">Deliverables</h4>
                     <ul class="list-disc list-inside mb-4">
-                        <li>Plan du réseau</li>
-                        <li>Procédures d'installation de chaque équipement</li>
-                        <li>Schéma de la base de données</li>
-                        <li>Application web (PHP)</li>
-                        <li>Scénario de test</li>
+                        <li>Network plan</li>
+                        <li>Installation procedures for each equipment</li>
+                        <li>Database schema</li>
+                        <li>Web application (PHP)</li>
+                        <li>Test scenario</li>
                     </ul>
-                    <h4 class="text-xl font-bold mb-2">Objectifs pédagogiques</h4>
+                    <h4 class="text-xl font-bold mb-2">Educational Objectives</h4>
                     <ul class="list-disc list-inside mb-4">
-                        <li>Nommer et décrire les différents rôles d’un projet SCRUM</li>
-                        <li>Appliquer et comprendre la méthodologie agile SCRUM dans un projet</li>
-                        <li>Participer à un projet en mode agile</li>
-                        <li>Déployer des services réseaux</li>
-                        <li>Développer une application web</li>
-                        <li>Connaître les commandes de base de l’IOS</li>
-                        <li>Accroître les connaissances du shell</li>
+                        <li>Identify and describe the different roles in a SCRUM project</li>
+                        <li>Apply and understand the agile SCRUM methodology in a project</li>
+                        <li>Participate in a project in agile mode</li>
+                        <li>Deploy network services</li>
+                        <li>Develop a web application</li>
+                        <li>Know the basic IOS commands</li>
+                        <li>Increase shell knowledge</li>
                     </ul>
-                    <h4 class="text-xl font-bold mb-2">Pré-requis</h4>
+                    <h4 class="text-xl font-bold mb-2">Prerequisites</h4>
                     <ul class="list-disc list-inside mb-4">
-                        <li>Réseaux TCP/IP</li>
-                        <li>IOS Cisco</li>
-                        <li>Shell Linux</li>
+                        <li>TCP/IP Networks</li>
+                        <li>Cisco IOS</li>
+                        <li>Linux Shell</li>
                         <li>Web</li>
                         <li>PHP</li>
                         <li>VirtualBox</li>
-                        <li>Windows Serveur</li>
+                        <li>Windows Server</li>
                         <li>Apache</li>
                         <li>SMTP</li>
                     </ul>
                 </div>
             </div>
-            <!-- Ajouter d'autres projets ici -->
+            <!-- Add other projects here -->
         </div>
+        
     </section>
+
+    <div class="flex flex-wrap justify-center">
+        <!-- Network Architecture Project -->
+        <div class="project-card m-4 p-6 bg-gray-700 rounded-lg shadow-lg text-left transform transition-transform hover:scale-105" data-aos="fade-up">
+            <h3 class="text-2xl font-bold mb-4 text-blue-400">Network Architecture Project</h3>
+            <p class="mb-4">Project completed at the end of the 4th year of engineering school</p>
+            <p class="mb-4">Set up a secure local network for a gaming championship using the SCRUM methodology.</p>
+            <button class="details-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="toggleDetails(this)">Details</button>
+            <div class="project-details mt-4 hidden">
+                <h4 class="text-xl font-bold mb-2">Project Description</h4>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Set up the network and system infrastructure</li>
+                    <li>Implement network security (distribution and segmentation of the class C IP address 195.221.X.0 into 3 subnets)</li>
+                    <li>Develop scripts for remote competition launches</li>
+                </ul>
+                <h4 class="text-xl font-bold mb-2">Proposed Solution</h4>
+                <h5 class="text-lg font-bold mb-1">Network Part:</h5>
+                <ul class="list-disc list-inside mb-4">
+                    <li>A router to interconnect the city with the rest of the world</li>
+                    <li>An IP addressing plan</li>
+                    <li>A backup of the configuration on a server</li>
+                    <li>LAN traffic security</li>
+                </ul>
+                <h5 class="text-lg font-bold mb-1">System Part:</h5>
+                <ul class="list-disc list-inside mb-4">
+                    <li>A web server for displaying scores and launching games</li>
+                    <li>A mail server and a webmail for appointment messages</li>
+                    <li>Two DNS servers (Linux and Windows) for resolving DMZ and Trusted names</li>
+                    <li>An Active Directory directory server to authenticate players</li>
+                </ul>
+                <h5 class="text-lg font-bold mb-1">Match Management:</h5>
+                <ul class="list-disc list-inside mb-4">
+                    <li>A secure web interface for displaying results (protected by directory login/password)</li>
+                    <li>The ability to launch a server to host a competition (Administrator)</li>
+                    <li>To prevent cheating, the player must have the game and only the game on their screen</li>
+                </ul>
+                <h4 class="text-xl font-bold mb-2">Deliverables</h4>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Network plan</li>
+                    <li>Installation procedures for each equipment</li>
+                    <li>Database schema</li>
+                    <li>Web application (PHP)</li>
+                    <li>Test scenario</li>
+                </ul>
+                <h4 class="text-xl font-bold mb-2">Educational Objectives</h4>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Identify and describe the different roles in a SCRUM project</li>
+                    <li>Apply and understand the agile SCRUM methodology in a project</li>
+                    <li>Participate in a project in agile mode</li>
+                    <li>Deploy network services</li>
+                    <li>Develop a web application</li>
+                    <li>Know the basic IOS commands</li>
+                    <li>Increase shell knowledge</li>
+                </ul>
+                <h4 class="text-xl font-bold mb-2">Prerequisites</h4>
+                <ul class="list-disc list-inside mb-4">
+                    <li>TCP/IP Networks</li>
+                    <li>Cisco IOS</li>
+                    <li>Linux Shell</li>
+                    <li>Web</li>
+                    <li>PHP</li>
+                    <li>VirtualBox</li>
+                    <li>Windows Server</li>
+                    <li>Apache</li>
+                    <li>SMTP</li>
+                </ul>
+                <!-- Swiper -->
+                <div class="swiper-container project-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/image1.jpg" alt="Project Image 1"></div>
+                        <div class="swiper-slide"><img src="images/image2.jpg" alt="Project Image 2"></div>
+                        <div class="swiper-slide"><img src="images/image3.jpg" alt="Project Image 3"></div>
+                        <div class="swiper-slide"><img src="images/image4.jpg" alt="Project Image 3"></div>
+                        <div class="swiper-slide"><img src="images/image5.jpg" alt="Project Image 3"></div>
+                        <div class="swiper-slide"><img src="images/image6.jpg" alt="Project Image 3"></div>
+                        <div class="swiper-slide"><img src="images/image7.jpg" alt="Project Image 3"></div>
+                        <div class="swiper-slide"><img src="images/image8.jpg" alt="Project Image 3"></div>
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex flex-wrap justify-center">
+        <!-- Network Architecture Project -->
+        <div class="project-card m-4 p-6 bg-gray-700 rounded-lg shadow-lg text-left transform transition-transform hover:scale-105" data-aos="fade-up">
+            <h3 class="text-2xl font-bold mb-4 text-blue-400">Network Architecture Project</h3>
+            <p class="mb-4">Project completed at the end of the 4th year of engineering school</p>
+            <p class="mb-4">Set up a secure local network for a gaming championship using the SCRUM methodology.</p>
+            <button class="details-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="toggleDetails(this)">Details</button>
+            <div class="project-details mt-4 hidden">
+                <h4 class="text-xl font-bold mb-2">Project Description</h4>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Set up the network and system infrastructure</li>
+                    <li>Implement network security (distribution and segmentation of the class C IP address 195.221.X.0 into 3 subnets)</li>
+                    <li>Develop scripts for remote competition launches</li>
+                </ul>
+                <h4 class="text-xl font-bold mb-2">Proposed Solution</h4>
+                <h5 class="text-lg font-bold mb-1">Network Part:</h5>
+                <ul class="list-disc list-inside mb-4">
+                    <li>A router to interconnect the city with the rest of the world</li>
+                    <li>An IP addressing plan</li>
+                    <li>A backup of the configuration on a server</li>
+                    <li>LAN traffic security</li>
+                </ul>
+                <h5 class="text-lg font-bold mb-1">System Part:</h5>
+                <ul class="list-disc list-inside mb-4">
+                    <li>A web server for displaying scores and launching games</li>
+                    <li>A mail server and a webmail for appointment messages</li>
+                    <li>Two DNS servers (Linux and Windows) for resolving DMZ and Trusted names</li>
+                    <li>An Active Directory directory server to authenticate players</li>
+                </ul>
+                <h5 class="text-lg font-bold mb-1">Match Management:</h5>
+                <ul class="list-disc list-inside mb-4">
+                    <li>A secure web interface for displaying results (protected by directory login/password)</li>
+                    <li>The ability to launch a server to host a competition (Administrator)</li>
+                    <li>To prevent cheating, the player must have the game and only the game on their screen</li>
+                </ul>
+                <h4 class="text-xl font-bold mb-2">Deliverables</h4>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Network plan</li>
+                    <li>Installation procedures for each equipment</li>
+                    <li>Database schema</li>
+                    <li>Web application (PHP)</li>
+                    <li>Test scenario</li>
+                </ul>
+                <h4 class="text-xl font-bold mb-2">Educational Objectives</h4>
+                <ul class="list-disc list-inside mb-4">
+                    <li>Identify and describe the different roles in a SCRUM project</li>
+                    <li>Apply and understand the agile SCRUM methodology in a project</li>
+                    <li>Participate in a project in agile mode</li>
+                    <li>Deploy network services</li>
+                    <li>Develop a web application</li>
+                    <li>Know the basic IOS commands</li>
+                    <li>Increase shell knowledge</li>
+                </ul>
+                <h4 class="text-xl font-bold mb-2">Prerequisites</h4>
+                <ul class="list-disc list-inside mb-4">
+                    <li>TCP/IP Networks</li>
+                    <li>Cisco IOS</li>
+                    <li>Linux Shell</li>
+                    <li>Web</li>
+                    <li>PHP</li>
+                    <li>VirtualBox</li>
+                    <li>Windows Server</li>
+                    <li>Apache</li>
+                    <li>SMTP</li>
+                </ul>
+                <!-- Swiper -->
+                <div class="swiper-container project-carousel detailsm">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="images/image1.jpg" alt="Project Image 1"></div>
+                        <div class="swiper-slide"><img src="images/image2.jpg" alt="Project Image 2"></div>
+                        <div class="swiper-slide"><img src="images/image3.jpg" alt="Project Image 3"></div>
+                        <div class="swiper-slide"><img src="images/image4.jpg" alt="Project Image 3"></div>
+                        <div class="swiper-slide"><img src="images/image5.jpg" alt="Project Image 3"></div>
+                        <div class="swiper-slide"><img src="images/image6.jpg" alt="Project Image 3"></div>
+                        <div class="swiper-slide"><img src="images/image7.jpg" alt="Project Image 3"></div>
+                        <div class="swiper-slide"><img src="images/image8.jpg" alt="Project Image 3"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     
-    
-    
-    
-    
+
     
     
 
@@ -216,7 +431,7 @@
         if (details.classList.contains('hidden')) {
             details.classList.remove('hidden');
             details.classList.add('show');
-            button.textContent = 'Moins de détails';
+            button.textContent = 'Less details';
         } else {
             details.classList.add('hidden');
             details.classList.remove('show');
@@ -227,6 +442,44 @@
     
     
 
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <!-- Initialize Swiper -->
+        <script>
+            function toggleDetails(button) {
+                var details = button.nextElementSibling;
+                if (details.classList.contains('hidden')) {
+                    details.classList.remove('hidden');
+                    details.classList.add('show');
+                    button.textContent = 'Less details';
+                    initSwiper();
+                } else {
+                    details.classList.add('hidden');
+                    details.classList.remove('show');
+                    button.textContent = 'Details';
+                }
+            }
+        
+            function initSwiper() {
+                var swiper = new Swiper('.swiper-container', {
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            }
+        </script>
+        
     
+</body>
     
     
