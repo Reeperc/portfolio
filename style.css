@@ -155,9 +155,62 @@ form {
 }
 
 .skill-card {
-    background-color: #1f2937; /* Darker background */
-    border: 1px solid #2d3748; /* Border color */
-    border-radius: 0.5rem;
+    background-color: #364f73;; /* Darker background */
+    border: 1px solid #2d374800; /* Border color */
+    border-radius: 5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+    flex: 1 1 45%; /* Flex basis with shrink and grow */
+    min-width: 280px;
+    max-width: 600px;
+}
+.skill-card2 {
+    background-color: #030962;; /* Darker background */
+    border: 1px solid #2d374800; /* Border color */
+    border-radius: 5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+    flex: 1 1 45%; /* Flex basis with shrink and grow */
+    min-width: 280px;
+    max-width: 600px;
+}
+
+.skill-card3 {
+    background-color: #158db5;; /* Darker background */
+    border: 1px solid #2d374800; /* Border color */
+    border-radius: 5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+    flex: 1 1 45%; /* Flex basis with shrink and grow */
+    min-width: 280px;
+    max-width: 600px;
+}.skill-card4 {
+    background-color: #740a72;; /* Darker background */
+    border: 1px solid #2d374800; /* Border color */
+    border-radius: 5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+    flex: 1 1 45%; /* Flex basis with shrink and grow */
+    min-width: 280px;
+    max-width: 600px;
+}.skill-card5 {
+    background-color: #0f9454;; /* Darker background */
+    border: 1px solid #2d374800; /* Border color */
+    border-radius: 5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin: 1rem;
+    flex: 1 1 45%; /* Flex basis with shrink and grow */
+    min-width: 280px;
+    max-width: 600px;
+}.skill-card6 {
+    background-color: #ce8913;; /* Darker background */
+    border: 1px solid #2d374800; /* Border color */
+    border-radius: 5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     margin: 1rem;
@@ -378,3 +431,8 @@ color:#d4fcc5;
         max-height: 200px;
     }
 }
+
+.from-green-400 {
+    --tw-gradient-from: #34d399;
+    --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to, rgba(52, 211, 153, 0));
+  }

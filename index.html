@@ -31,7 +31,7 @@
         </nav>
         <div class="container mx-auto text-center py-10 md:py-20">
             <h1 class="text-4xl md:text-6xl font-extrabold" id="hero-title">Welcome to my portfolio</h1>
-            <p class="text-xl md:text-5xl mt-4" id="hero-subtitle">Hello! I'm Taher 
+            <p class="text-xl md:text-5xl mt-4" id="hero-subtitle"> I'm Taher 
             </p>
             <div id="lottie-animation" class="w-32 h-32 md:w-48 md:h-48 mx-auto mt-8"></div>
         </div>
@@ -236,70 +236,91 @@
         
     </section>
     
-<!-- AOS Library for animations -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-
-<!-- Font Awesome for icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
-<section id="skills" class="container-skills mx-auto py-10 md:py-20">
-    <h2 class="text-3xl md:text-5xl font-bold text-center mb-6 md:mb-12">Skills</h2>
-    <div class="flex flex-wrap justify-center">
-        <div class="skill-card m-4 p-6 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
-            <h3 class="text-xl md:text-2xl font-bold mb-4">Frontend</h3>
-            <div class="flex flex-wrap justify-center">
-                <div class="skill-item flex items-center m-2"><i class="fab fa-react text-2xl mr-2"></i>React Js</div>
-                <div class="skill-item flex items-center m-2"><i class="fab fa-html5 text-2xl mr-2"></i>HTML</div>
-                <div class="skill-item flex items-center m-2"><i class="fab fa-css3-alt text-2xl mr-2"></i>CSS</div>
-                <div class="skill-item flex items-center m-2"><i class="fab fa-js text-2xl mr-2"></i>JavaScript</div>
-                <div class="skill-item flex items-center m-2"><i class="fab fa-bootstrap text-2xl mr-2"></i>Bootstrap</div>
+    <section id="skills" class="container-skills mx-auto py-10 md:py-20">
+        <h2 class="text-3xl md:text-5xl font-bold text-center mb-6 md:mb-12">Skills</h2>
+        <div class="flex flex-wrap justify-center">
+            <div class="skill-card m-4 p-6 bg-gradient-to-r from-teal-400 to-blue-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Programming</h3>
+                <div class="flex flex-wrap justify-center">
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>Python</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>C</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>SQL</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>Java</div>
+                </div>
+            </div>
+            <div class="skill-card3 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Web Development</h3>
+                <div class="flex flex-wrap justify-center">
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-html5 text-2xl mr-2"></i>HTML</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-css3-alt text-2xl mr-2"></i>CSS</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-js text-2xl mr-2"></i>JavaScript</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-php text-2xl mr-2"></i>PHP</div>
+                </div>
+            </div>
+            <div class="skill-card5 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Tools & Software</h3>
+                <div class="flex flex-wrap justify-center">
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>MATLAB</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>OrCAD</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>MS Office</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-database text-2xl mr-2"></i>Oracle SQL Developer</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>MySQL</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-apache text-2xl mr-2"></i>Apache</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-server text-2xl mr-2"></i>Git</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-github text-2xl mr-2"></i>GitHub</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-linux text-2xl mr-2"></i>Linux</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>Wireshark</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-shield-alt text-2xl mr-2"></i>Burp Suite</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-folder text-2xl mr-2"></i>WinSCP</div>
+                </div>
+            </div>
+            <div class="skill-card2 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Networks & Security</h3>
+                <div class="flex flex-wrap justify-center">
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>TCP/IP</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>SMTP</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>Cisco IOS</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-server text-2xl mr-2"></i>Router/Switch Configuration</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-firewall text-2xl mr-2"></i>Firewalls</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>pfSense</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-users-cog text-2xl mr-2"></i>Active Directory (LDAP)</div>
+                </div>
+            </div>
+            <div class="skill-card4 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Virtualization & OS</h3>
+                <div class="flex flex-wrap justify-center">
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-windows text-2xl mr-2"></i>Windows Server</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-cube text-2xl mr-2"></i>VM VirtualBox</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-server text-2xl mr-2"></i>VMware</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-linux text-2xl mr-2"></i>Linux Server</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-terminal text-2xl mr-2"></i>Shell Linux</div>
+                </div>
+            </div>
+            <div class="skill-card6 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="500">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Risk Management</h3>
+                <div class="flex flex-wrap justify-center">
+                    <!-- <div class="skill-item flex items-center m-2"><i class="fas fa-exclamation-triangle text-2xl mr-2"></i>All4tec</div> -->
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-shield-alt text-2xl mr-2"></i>EBIOS Risk Manager</div>
+                </div>
             </div>
         </div>
-        <div class="skill-card m-4 p-6 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
-            <h3 class="text-xl md:text-2xl font-bold mb-4">Backend</h3>
-            <div class="flex flex-wrap justify-center">
-                <div class="skill-item flex items-center m-2"><i class="fab fa-node-js text-2xl mr-2"></i>Node Js</div>
-                <div class="skill-item flex items-center m-2"><i class="fas fa-python text-2xl mr-2"></i>Python</div>
-                <div class="skill-item flex items-center m-2"><i class="fas fa-database text-2xl mr-2"></i>MySQL</div>
-                <div class="skill-item flex items-center m-2"><i class="fab fa-php text-2xl mr-2"></i>PHP</div>
-                <div class="skill-item flex items-center m-2"><i class="fas fa-database text-2xl mr-2"></i>Oracle</div>
-                <div class="skill-item flex items-center m-2"><i class="fab fa-java text-2xl mr-2"></i>Java</div>
-                <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>C</div>
-            </div>
-        </div>
-        <div class="skill-card m-4 p-6 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
-            <h3 class="text-xl md:text-2xl font-bold mb-4">DevOps</h3>
-            <div class="flex flex-wrap justify-center">
-                <div class="skill-item flex items-center m-2"><i class="fab fa-microsoft text-2xl mr-2"></i>Microsoft Azure</div>
-            </div>
-        </div>
-        <div class="skill-card m-4 p-6 bg-gradient-to-r from-yellow-500 to-pink-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
-            <h3 class="text-xl md:text-2xl font-bold mb-4">Machine Learning</h3>
-            <div class="flex flex-wrap justify-center">
-                <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>Python</div>
-                <div class="skill-item flex items-center m-2"><i class="fas fa-book text-2xl mr-2"></i>Jupyter</div>
-                <div class="skill-item flex items-center m-2"><i class="fas fa-chart-line text-2xl mr-2"></i>Sk Learn Kit</div>
-                <div class="skill-item flex items-center m-2"><i class="fas fa-database text-2xl mr-2"></i>Pandas</div>
-                <div class="skill-item flex items-center m-2"><i class="fas fa-chart-bar text-2xl mr-2"></i>Seaborn</div>
-                <div class="skill-item flex items-center m-2"><i class="fas fa-calculator text-2xl mr-2"></i>NumPy</div>
-            </div>
-        </div>
-        <div class="skill-card m-4 p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
-            <h3 class="text-xl md:text-2xl font-bold mb-4">Others</h3>
-            <div class="flex flex-wrap justify-center">
-                <div class="skill-item flex items-center m-2"><i class="fab fa-git text-2xl mr-2"></i>Git</div>
-                <div class="skill-item flex items-center m-2"><i class="fab fa-github text-2xl mr-2"></i>GitHub</div>
-                <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>VS Code</div>
-                <div class="skill-item flex items-center m-2"><i class="fas fa-bug text-2xl mr-2"></i>Postman</div>
-                <div class="skill-item flex items-center m-2"><i class="fab fa-linux text-2xl mr-2"></i>Linux</div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+    
+    <!-- AOS Library for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false,
+        });
+    </script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    
+    
     
     
 
