@@ -217,13 +217,17 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide"><img src="images/robot1.jpg" alt="Project Image 9"></div>
                         <div class="swiper-slide"><img src="images/robot2.jpg" alt="Project Image 10"></div>
-                        <div class="swiper-slide"><video controls><source src="videos/robot.mp4" type="video/mp4">Your browser does not support the video tag.</video></div>
+                        <div class="swiper-slide">
+                            <video controls id="projectVideo">
+                                <source src="videos/robot.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
-                    <!-- Add Navigation -->
-                    <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
@@ -369,6 +373,40 @@
                 });
             }
         </script>
+        
+ <script>
+//     function initSwiper() {
+// var swiper = new Swiper('.swiper-container', {
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//     },
+//     loop: false,
+//     autoplay: true,
+//     effect: 'slide',
+//     grabCursor: true,
+//     centeredSlides: true,
+//     slidesPerView: 'auto',
+//     spaceBetween: 30,
+//     on: {
+//         slideChange: function () {
+//             var video = document.getElementById('project-video');
+//             if (swiper.activeIndex === swiper.slides.length - 1) {
+//                 video.play();
+//                 Swiper( autoplay: false )
+//                 video.onended = function () {
+//                     swiper.slideNext();
+//                 };
+//             } else {
+//                 video.pause();
+//                 video.currentTime = 0;
+//             }
+//         }
+//     }
+
+// });
+//     }
+</script>
         
     
 </body>
