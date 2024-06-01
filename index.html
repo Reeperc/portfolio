@@ -236,61 +236,70 @@
         
     </section>
     
+<!-- AOS Library for animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
-    <section id="skills" class="container-skills mx-auto py-10 md:py-20">
-        <h2 class="text-3xl md:text-5xl font-bold text-center mb-6 md:mb-12">Skills</h2>
-        <div class="flex flex-wrap justify-center">
-            <div class="skill-card m-4 p-6 bg-gray-800 rounded-lg shadow-lg text-center">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Frontend</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item">React Js</div>
-                    <div class="skill-item">HTML</div>
-                    <div class="skill-item">CSS</div>
-                    <div class="skill-item">JavaScript</div>
-                    <div class="skill-item">Bootstrap</div>
-                </div>
-            </div>
-            <div class="skill-card m-4 p-6 bg-gray-800 rounded-lg shadow-lg text-center">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Backend</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item">Node Js</div>
-                    <div class="skill-item">Python</div>
-                    <div class="skill-item">MySQL</div>
-                    <div class="skill-item">PHP</div>
-                    <div class="skill-item">Oracle</div>
-                    <div class="skill-item">Java</div>
-                    <div class="skill-item">C</div>
-                </div>
-            </div>
-            <div class="skill-card m-4 p-6 bg-gray-800 rounded-lg shadow-lg text-center">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">DevOps</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item">Microsoft Azure</div>
-                </div>
-            </div>
-            <div class="skill-card m-4 p-6 bg-gray-800 rounded-lg shadow-lg text-center">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Machine Learning</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item">Python</div>
-                    <div class="skill-item">Jupyter</div>
-                    <div class="skill-item">Sk Learn Kit</div>
-                    <div class="skill-item">Pandas</div>
-                    <div class="skill-item">Seaborn</div>
-                    <div class="skill-item">NumPy</div>
-                </div>
-            </div>
-            <div class="skill-card m-4 p-6 bg-gray-800 rounded-lg shadow-lg text-center">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Others</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item">Git</div>
-                    <div class="skill-item">GitHub</div>
-                    <div class="skill-item">VS Code</div>
-                    <div class="skill-item">Postman</div>
-                    <div class="skill-item">Linux</div>
-                </div>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<section id="skills" class="container-skills mx-auto py-10 md:py-20">
+    <h2 class="text-3xl md:text-5xl font-bold text-center mb-6 md:mb-12">Skills</h2>
+    <div class="flex flex-wrap justify-center">
+        <div class="skill-card m-4 p-6 bg-gradient-to-r from-purple-500 to-blue-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">Frontend</h3>
+            <div class="flex flex-wrap justify-center">
+                <div class="skill-item flex items-center m-2"><i class="fab fa-react text-2xl mr-2"></i>React Js</div>
+                <div class="skill-item flex items-center m-2"><i class="fab fa-html5 text-2xl mr-2"></i>HTML</div>
+                <div class="skill-item flex items-center m-2"><i class="fab fa-css3-alt text-2xl mr-2"></i>CSS</div>
+                <div class="skill-item flex items-center m-2"><i class="fab fa-js text-2xl mr-2"></i>JavaScript</div>
+                <div class="skill-item flex items-center m-2"><i class="fab fa-bootstrap text-2xl mr-2"></i>Bootstrap</div>
             </div>
         </div>
-    </section>
+        <div class="skill-card m-4 p-6 bg-gradient-to-r from-green-500 to-teal-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">Backend</h3>
+            <div class="flex flex-wrap justify-center">
+                <div class="skill-item flex items-center m-2"><i class="fab fa-node-js text-2xl mr-2"></i>Node Js</div>
+                <div class="skill-item flex items-center m-2"><i class="fas fa-python text-2xl mr-2"></i>Python</div>
+                <div class="skill-item flex items-center m-2"><i class="fas fa-database text-2xl mr-2"></i>MySQL</div>
+                <div class="skill-item flex items-center m-2"><i class="fab fa-php text-2xl mr-2"></i>PHP</div>
+                <div class="skill-item flex items-center m-2"><i class="fas fa-database text-2xl mr-2"></i>Oracle</div>
+                <div class="skill-item flex items-center m-2"><i class="fab fa-java text-2xl mr-2"></i>Java</div>
+                <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>C</div>
+            </div>
+        </div>
+        <div class="skill-card m-4 p-6 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">DevOps</h3>
+            <div class="flex flex-wrap justify-center">
+                <div class="skill-item flex items-center m-2"><i class="fab fa-microsoft text-2xl mr-2"></i>Microsoft Azure</div>
+            </div>
+        </div>
+        <div class="skill-card m-4 p-6 bg-gradient-to-r from-yellow-500 to-pink-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">Machine Learning</h3>
+            <div class="flex flex-wrap justify-center">
+                <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>Python</div>
+                <div class="skill-item flex items-center m-2"><i class="fas fa-book text-2xl mr-2"></i>Jupyter</div>
+                <div class="skill-item flex items-center m-2"><i class="fas fa-chart-line text-2xl mr-2"></i>Sk Learn Kit</div>
+                <div class="skill-item flex items-center m-2"><i class="fas fa-database text-2xl mr-2"></i>Pandas</div>
+                <div class="skill-item flex items-center m-2"><i class="fas fa-chart-bar text-2xl mr-2"></i>Seaborn</div>
+                <div class="skill-item flex items-center m-2"><i class="fas fa-calculator text-2xl mr-2"></i>NumPy</div>
+            </div>
+        </div>
+        <div class="skill-card m-4 p-6 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105">
+            <h3 class="text-xl md:text-2xl font-bold mb-4">Others</h3>
+            <div class="flex flex-wrap justify-center">
+                <div class="skill-item flex items-center m-2"><i class="fab fa-git text-2xl mr-2"></i>Git</div>
+                <div class="skill-item flex items-center m-2"><i class="fab fa-github text-2xl mr-2"></i>GitHub</div>
+                <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>VS Code</div>
+                <div class="skill-item flex items-center m-2"><i class="fas fa-bug text-2xl mr-2"></i>Postman</div>
+                <div class="skill-item flex items-center m-2"><i class="fab fa-linux text-2xl mr-2"></i>Linux</div>
+            </div>
+        </div>
+    </div>
+</section>
     
     
 
