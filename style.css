@@ -806,3 +806,10 @@ header::after {
       transition-duration: 0.3s, 0.3s;
       transition-timing-function: ease-in-out, ease-in-out;
   }
+
+  .bg-gray-8008 {
+    background-color: #1f64a1;
+  }
+  .bg-gray-7008 {
+    background-color: #0e1732;
+  }
