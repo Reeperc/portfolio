@@ -1,4 +1,4 @@
-# Taher Karimdjee's Portfolio
+# Taher's Portfolio
 
 ## Overview
 
