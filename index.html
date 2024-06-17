@@ -116,20 +116,7 @@
    
     
     
-    <!-- <section id="profile" class="bg-gray-800 py-10 md:py-20">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-yellow-300 mb-6 md:mb-12">Profile</h2>
-            <p class="text-lg md:text-xl text-gray-300 mb-4">
-                I am 22 years old and a French national. Currently, I am a fourth-year student at ESIGELEC Rouen, specializing in network and IoT cybersecurity. My goal is to become a cybersecurity engineer.
-            </p>
-            <p class="text-lg md:text-xl text-gray-300 mb-4">
-                Passionate about cybersecurity, I have strong skills in protecting networks and IoT devices from cyber threats. I am currently seeking a technician internship in this field, as well as a 12-month professionalization contract to apply my knowledge and contribute to innovative projects.
-            </p>
-            <p class="text-lg md:text-xl text-gray-300 mb-4">
-                My academic journey and projects have allowed me to acquire expertise in network security management, programming, and risk management. I am determined, meticulous, and always looking for new opportunities to improve my skills and help companies secure their infrastructures.
-            </p>
-        </div>
-    </section> -->
+ 
     
 
     <section id="projects" class="bg-gray-800 py-10 md:py-20">
@@ -140,14 +127,14 @@
             <div class="project-card m-4 p-6 bg-gray-700 rounded-lg shadow-lg text-left transform transition-transform hover:scale-105" data-aos="fade-up">
                 <h3 class="text-2xl font-bold mb-4 text-blue-400">Network Architecture Project</h3>
                 <p class="mb-4">Project completed at the end of the 4th year of engineering school</p>
-                <p class="mb-4">Set up a secure local network for a gaming championship using the SCRUM methodology.</p>
+                <p class="mb-4">Set up a secure local network for a gaming championship (use of the SCRUM methodology).</p>
                 <button class="details-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="toggleDetails(this)">Details</button>
                 <div class="project-details mt-4 hidden">
                     <h4 class="text-xl font-bold mb-2">Project Description</h4>
                     <ul class="list-disc list-inside mb-4">
-                        <li>Set up the network and system infrastructure</li>
-                        <li>Implement network security (distribution and segmentation of the class C IP address 195.221.X.0 into 3 subnets)</li>
-                        <li>Develop scripts for remote competition launches</li>
+                        <li>Set up a network and system infrastructure allowing users to play. The game organizer can create tournaments.</li>
+                        <li>Implement network security backups for the configurations of routers/switches, tournament history, and the distribution and segmentation of a Class C IP address into 3 subnets.</li>
+                        <li>Players must be able to connect to the network via WiFi, access a website through their session, and receive an email when it is their turn to play (set up an email server).</li>
                     </ul>
                     <h4 class="text-xl font-bold mb-2">Proposed Solution</h4>
                     <h5 class="text-lg font-bold mb-1">Network Part:</h5>
@@ -159,9 +146,9 @@
                     </ul>
                     <h5 class="text-lg font-bold mb-1">System Part:</h5>
                     <ul class="list-disc list-inside mb-4">
-                        <li>A web server for displaying scores and launching games</li>
+                        <li>A web server, hosting the website for displaying scores and launching games</li>
                         <li>A mail server and a webmail for appointment messages</li>
-                        <li>Two DNS servers (Linux and Windows) for resolving DMZ and Trusted names</li>
+                        <li>DNS server for resolving DMZ and Trusted names</li>
                         <li>An Active Directory directory server to authenticate players</li>
                     </ul>
                     <h5 class="text-lg font-bold mb-1">Match Management:</h5>
@@ -178,16 +165,15 @@
                         <li>Web application (PHP)</li>
                         <li>Test scenario</li>
                     </ul> -->
-                    <h4 class="text-xl font-bold mb-2">Educational Objectives</h4>
+                    <h4 class="text-xl font-bold mb-2">What I learned from this project</h4>
                     <ul class="list-disc list-inside mb-4">
-                        <li>Identify and describe the different roles in a SCRUM project</li>
-                        <li>Apply and understand the agile SCRUM methodology in a project</li>
-                        <li>Participate in a project in agile mode</li>
-                        <li>Deploy network services</li>
-                        <li>Develop a web application</li>
-                        <li>Know the basic IOS commands</li>
-                        <li>Increase shell knowledge</li>
+                        <li>Gained a better understanding of the agile SCRUM methodology in a project: it is a very efficient method, based on good communication among the team and daily meetings.</li>
+                        <li>Deployed network services: it was the first project in which I used real hardware, as we usually simulate everything on Cisco Packet Tracer in class to learn the basic commands.</li>
+                        <li>Developed a website: I've had experience in this field before, but this time I was completely in charge of implementing and updating the site. I learned more about the functioning of GitHub, beyond just "push" and "pull", understanding how branches work and their usefulness. I also enjoyed discovering dynamic animations on the web with JavaScript. This project is actually the reason why I decided to create this portfolio.</li>
+                        <li>This project required knowing the basic commands, both in shell and Cisco IOS.</li>
+                        <li>Increased knowledge: learned about backups (discovered Oxidized) and how easy it is to set up WiFi for a network.</li>
                     </ul>
+                    
                     <h4 class="text-xl font-bold mb-2">Prerequisites</h4>
                     <ul class="list-disc list-inside mb-4">
                         <li>TCP/IP Networks</li>
@@ -196,9 +182,10 @@
                         <li>Web</li>
                         <li>PHP</li>
                         <li>VirtualBox</li>
-                        <li>Windows Server</li>
+                        <li>Windows Server (An Active Directory)</li>
                         <li>Apache</li>
                         <li>SMTP</li>
+                        
                     </ul>
                     <!-- Swiper -->
                     <div class="swiper-container project-carousel detailsm">
@@ -326,89 +313,6 @@
         
     </section>
 
-    
-    
-    <section id="skills" class="container-skills mx-auto py-10 md:py-20">
-        <h2 class="text-3xl md:text-5xl font-bold text-center mb-6 md:mb-12">Hard Skills</h2>
-        <div class="flex flex-wrap justify-center">
-            <div class="skill-card m-4 p-6 bg-gradient-to-r from-teal-400 to-blue-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Programming</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>Python</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>C</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>SQL</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>Java</div>
-                </div>
-            </div>
-            <div class="skill-card3 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Web Development</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-html5 text-2xl mr-2"></i>HTML</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-css3-alt text-2xl mr-2"></i>CSS</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-js text-2xl mr-2"></i>JavaScript</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-php text-2xl mr-2"></i>PHP</div>
-                </div>
-            </div>
-            <div class="skill-card5 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Tools & Software</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>MATLAB</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>OrCAD</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>MS Office</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-database text-2xl mr-2"></i>Oracle SQL Developer</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>MySQL</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-apache text-2xl mr-2"></i>Apache</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-server text-2xl mr-2"></i>Git</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-github text-2xl mr-2"></i>GitHub</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-linux text-2xl mr-2"></i>Linux</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>Wireshark</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-shield-alt text-2xl mr-2"></i>Burp Suite</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-folder text-2xl mr-2"></i>WinSCP</div>
-                </div>
-            </div>
-            <div class="skill-card2 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Networks & Security</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>TCP/IP</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>SMTP</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>Cisco IOS</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-server text-2xl mr-2"></i>Router/Switch Configuration</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-firewall text-2xl mr-2"></i>Firewalls</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>pfSense</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-users-cog text-2xl mr-2"></i>Active Directory (LDAP)</div>
-                </div>
-            </div>
-            <div class="skill-card4 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Virtualization & OS</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-windows text-2xl mr-2"></i>Windows Server</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-cube text-2xl mr-2"></i>VM VirtualBox</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-server text-2xl mr-2"></i>VMware</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-linux text-2xl mr-2"></i>Linux Server</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-terminal text-2xl mr-2"></i>Shell Linux</div>
-                </div>
-            </div>
-            <div class="skill-card6 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="500">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Risk Management</h3>
-                <div class="flex flex-wrap justify-center">
-                    <!-- <div class="skill-item flex items-center m-2"><i class="fas fa-exclamation-triangle text-2xl mr-2"></i>All4tec</div> -->
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-shield-alt text-2xl mr-2"></i>EBIOS Risk Manager</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- AOS Library for animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: false,
-        });
-    </script>
-    
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     
@@ -452,12 +356,109 @@
                     <h3 class="text-xl font-bold mb-2 text-blue-4001">EBIOS Risk Manager</h3>
                     <p class="mb-4">Objective: Risk study according to EBIOS.</p>
                     <ul class="list-disc list-inside mb-4">
-                        <li>Risk analysis of an identity renewal IS.</li>
+                        <li>Risk analysis of the information system of an ID renewal (in France).</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
+    
+    <section id="skills" class="container-skills mx-auto py-10 md:py-20">
+        <h2 class="text-3xl md:text-5xl font-bold text-center mb-6 md:mb-12">Hard Skills</h2>
+        <div class="flex flex-wrap justify-center">
+            <div class="skill-card m-4 p-6 bg-gradient-to-r from-teal-400 to-blue-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Programming</h3>
+                <div class="flex flex-wrap justify-center">
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>Python</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>C</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>SQL</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>Java</div>
+                </div>
+            </div>
+            <div class="skill-card3 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Web Development</h3>
+                <div class="flex flex-wrap justify-center">
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-html5 text-2xl mr-2"></i>HTML</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-css3-alt text-2xl mr-2"></i>CSS</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-js text-2xl mr-2"></i>JavaScript</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-php text-2xl mr-2"></i>PHP</div>
+                </div>
+            </div>
+            <div class="skill-card4 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Virtualization & OS</h3>
+                <div class="flex flex-wrap justify-center">
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-windows text-2xl mr-2"></i>Windows Server</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-cube text-2xl mr-2"></i>VM VirtualBox</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-server text-2xl mr-2"></i>VMware</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-linux text-2xl mr-2"></i>Linux Server</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-terminal text-2xl mr-2"></i>Shell Linux</div>
+                </div>
+            </div>
+            <div class="skill-card5 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Tools & Software</h3>
+                <div class="flex flex-wrap justify-center">
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>MFA</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>Secureboot</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-users-cog text-2xl mr-2"></i>Citrix</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>OrCAD</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>MS Office</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-database text-2xl mr-2"></i>Oracle SQL Developer</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>MySQL</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-apache text-2xl mr-2"></i>Apache</div>
+                    <!-- <div class="skill-item flex items-center m-2"><i class="fas fa-server text-2xl mr-2"></i>Git</div> -->
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-github text-2xl mr-2"></i>GitHub</div>
+                    <div class="skill-item flex items-center m-2"><i class="fab fa-linux text-2xl mr-2"></i>Linux</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>Wireshark</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-shield-alt text-2xl mr-2"></i>Burp Suite</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-folder text-2xl mr-2"></i>WinSCP</div>
+                </div>
+            </div>
+            <div class="skill-card2 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">Networks & Security</h3>
+                <div class="flex flex-wrap justify-center">
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>TCP/IP</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>SMTP</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>Cisco IOS</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-server text-2xl mr-2"></i>Router/Switch Configuration</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-firewall text-2xl mr-2"></i>Firewalls</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>pfSense</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-users-cog text-2xl mr-2"></i>Active Directory (LDAP)</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>SIEM</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>SOC</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>SOAR</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>IDPS</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>EDR</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>XDR</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>NSX</div>
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-shield-alt text-2xl mr-2"></i>EBIOS Risk Manager</div>
+                </div>
+            </div>
+            
+            <!-- <div class="skill-card6 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="500">
+                <h3 class="text-xl md:text-2xl font-bold mb-4">knowledge</h3>
+                <div class="flex flex-wrap justify-center">
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-exclamation-triangle text-2xl mr-2"></i>All4tec</div>
+                    
+                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>pfSense</div>
+
+                
+                </div>
+            </div> -->
+        </div>
+    </section>
+    
+    <!-- AOS Library for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false,
+        });
+    </script>
+    
+    
 
     <section id="professional-experience" class="bg-gray-8008 py-10 md:py-20">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-yellow-300 mb-6 md:mb-12" data-aos="fade-up">Other Experience and Projects</h2>
@@ -496,7 +497,7 @@
             <div class="additional-info-card p-4 bg-gray-700 rounded-lg shadow-lg mb-6" data-aos="fade-up">
                 <h3 class="text-xl font-bold mb-2 text-blue-400">Languages</h3>
                 <ul class="list-disc list-inside mb-4">
-                    <li>French: Fluent (native)</li>
+                    <li>French: Fluent (native speaker)</li>
                     <p></p>
                     <li>English: Advanced (B2, TOEIC 890)</li>
                     <li>German: Basic (A2)</li>
