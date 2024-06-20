@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Network Architecture Project" />
+    <meta name="author" content="Taher" />
+    <title>Network Architecture Project - Taher's Portfolio</title>
+    <link rel="icon" href="images/portfolio.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar, .card-header {
+            background-color: #333;
+            transition: background-color 0.3s;
+        }
+        .card {
+            background-color: #1e1e1e;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .section-title {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #f8f9fa;
+            text-align: center;
+        }
+        .container-fluid {
+            max-width: 1200px;
+        }
+        footer {
+            background-color: #333;
+            color: #f8f9fa;
+            padding: 20px 0;
+        }
+        .footer-links a {
+            color: #f8f9fa;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+        .project-detail-card {
+            background-color: #2e2e2e;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .project-detail-card h3 {
+            margin-top: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #f8f9fa;
+        }
+        .project-detail-card ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .project-detail-card ul li {
+            margin-bottom: 10px;
+            color: #d1d1d1;
+        }
+    </style>
+</head>
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand ps-3" href="index.html">Taher Karimdjee</a>
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/Reeperc/" target="_blank"><i class="fab fa-github"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/taherkarimdjee/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Home
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Portfolio</div>
+                        <a class="nav-link" href="index.html#about-me">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                            About Me
+                        </a>
+                        <a class="nav-link" href="index.html#education">
+                            <div class="sb-nav-link-icon"><i class="fas fa-graduation-cap"></i></div>
+                            Education
+                        </a>
+                        <a class="nav-link" href="index.html#projects">
+                            <div class="sb-nav-link-icon"><i class="fas fa-project-diagram"></i></div>
+                            Projects
+                        </a>
+                        <a class="nav-link" href="index.html#skills">
+                            <div class="sb-nav-link-icon"><i class="fas fa-laptop-code"></i></div>
+                            Skills
+                        </a>
+                        <a class="nav-link" href="index.html#practical-work">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tools"></i></div>
+                            Practical Work
+                        </a>
+                        <a class="nav-link" href="index.html#additional-info">
+                            <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
+                            Additional Infos
+                        </a>
+                        <a class="nav-link" href="index.html#contact">
+                            <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
+                            Contact
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Project Details</div>
+                        <a class="nav-link" href="network-architecture.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-network-wired"></i></div>
+                            Network Architecture
+                        </a>
+                        <a class="nav-link" href="robot-programming.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-robot"></i></div>
+                            Robot Programming
+                        </a>
+                        <a class="nav-link" href="solidarity-project.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                            Solidarity Project
+                        </a>
+                    </div>
+                </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Contact me</div>
+                    +33-783-689-984
+                    taher.karimdjee@groupe-eesigelec.org 
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4 section-title">Network Architecture Project</h1>
+                    <div class="project-detail-card">
+                        <h3>Project Description</h3>
+                        <ul>
+                            <li>Set up a network and system infrastructure allowing users to play. The game organizer can create tournaments.</li>
+                            <li>Implement network security backups for the configurations of routers/switches, tournament history, and the distribution and segmentation of a Class C IP address into 3 subnets.</li>
+                            <li>Players must be able to connect to the network via WiFi, access a website through their session, and receive an email when it is their turn to play (set up an email server).</li>
+                        </ul>
+                    </div>
+                    <div class="project-detail-card">
+                        <h3>Proposed Solution</h3>
+                        <h4>Network Part:</h4>
+                        <ul>
+                            <li>A router to interconnect the city with the rest of the world</li>
+                            <li>An IP addressing plan</li>
+                            <li>A backup of the configuration on a server</li>
+                            <li>LAN traffic security</li>
+                        </ul>
+                        <h4>System Part:</h4>
+                        <ul>
+                            <li>A web server, hosting the website for displaying scores and launching games</li>
+                            <li>A mail server and a webmail for appointment messages</li>
+                            <li>DNS server for resolving DMZ and Trusted names</li>
+                            <li>An Active Directory directory server to authenticate players</li>
+                        </ul>
+                        <h4>Match Management:</h4>
+                        <ul>
+                            <li>A secure web interface for displaying results (protected by directory login/password)</li>
+                            <li>The ability to launch a server to host a competition (Administrator)</li>
+                            <li>To prevent cheating, the player must have the game and only the game on their screen</li>
+                        </ul>
+                    </div>
+                    <div class="project-detail-card">
+                        <h3>What I learned from this project</h3>
+                        <ul>
+                            <li>Gained a better understanding of the agile SCRUM methodology in a project: it is a very efficient method, based on good communication among the team and daily meetings.</li>
+                            <li>Deployed network services: it was the first project in which I used real hardware, as we usually simulate everything on Cisco Packet Tracer in class to learn the basic commands.</li>
+                            <li>Developed a website: I've had experience in this field before, but this time I was completely in charge of implementing and updating the site. I learned more about the functioning of GitHub, beyond just "push" and "pull", understanding how branches work and their usefulness. I also enjoyed discovering dynamic animations on the web with JavaScript. This project is actually the reason why I decided to create this portfolio.</li>
+                            <li>This project required knowing the basic commands, both in shell and Cisco IOS.</li>
+                            <li>Increased knowledge: learned about backups (discovered Oxidized) and how easy it is to set up WiFi for a network.</li>
+                        </ul>
+                    </div>
+                    <div class="project-detail-card">
+                        <h3>Prerequisites</h3>
+                        <ul>
+                            <li>TCP/IP Networks</li>
+                            <li>Cisco IOS</li>
+                            <li>Linux Shell</li>
+                            <li>Web</li>
+                            <li>PHP</li>
+                            <li>VirtualBox</li>
+                            <li>Windows Server (An Active Directory)</li>
+                            <li>Apache</li>
+                            <li>SMTP</li>
+                        </ul>
+                    </div>
+                </div>
+            </main>
+            <footer class="py-4 bg-dark mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Taher's Portfolio &copy; 2024</div>
+                        <div class="footer-links">
+                            <a href="#"></a>
+                            <!-- &middot; -->
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

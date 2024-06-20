@@ -1,675 +1,578 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Taher's Portfolio" />
+    <meta name="author" content="Taher" />
     <title>Taher's Portfolio</title>
-    <link rel="icon" type="image/png" href="images/portfolio.png">
-    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico">  -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="path/to/tailwind.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.6/lottie.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-       (function(){
-          emailjs.init("m31XodcdB3-286Qxg"); // User ID
-       })();
-    </script>
+    <link rel="icon" href="images/portfolio.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            background-color: #121212;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .navbar, .card-header {
+            background-color: #333;
+            transition: background-color 0.3s;
+        }
+        .card {
+            background-color: #1e1e1e;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .section-title {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            color: #f8f9fa;
+            text-align: center;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #f8f9fa;
+            margin: 10px auto 0;
+        }
+        .container-fluid {
+            max-width: 1200px;
+        }
+        .nav-link {
+            color: #fff !important;
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: #f8f9fa !important;
+        }
+        .card-header {
+            font-weight: bold;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .btn-details {
+            background-color: #97b9da;
+            color: #1c2136;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-details:hover {
+            background-color: #ddd;
+            color: #000;
+        }
+        footer {
+            background-color: #333;
+            color: #f8f9fa;
+            padding: 20px 0;
+        }
+        .footer-links a {
+            color: #f8f9fa;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: #ddd;
+        }
+        .about-me-container {
+            display: flex;
+            align-items: center;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: background-color 0.3s;
+        }
+        .about-me-container img {
+            border-radius: 21%;
+            margin-right: 20px;
+            max-width: 150px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .about-me-container img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .about-me-container .text {
+            flex: 1;
+        }
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .skill-card {
+            background: linear-gradient(135deg, #3a3a3a, #1e1e1e);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            flex: 1 1 calc(33.333% - 20px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            background: linear-gradient(135deg, #4a4a4a, #2e2e2e);
+        }
+        .skill-card h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #f8f9fa;
+        }
+        .skill-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .skill-card ul li {
+            margin-bottom: 5px;
+            color: #d1d1d1;
+        }
+        .skill-card ul li::before {
+            content: "\f0da"; /* FontAwesome icon */
+            font-family: FontAwesome;
+            margin-right: 10px;
+            color: #f8f9fa;
+        }
+        @media (max-width: 768px) {
+            .about-me-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .about-me-container img {
+                margin: 0 0 20px 0;
+            }
+            .skill-card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
 </head>
-
-<body class="bg-gray-900 text-white">
-    <header class="bg-gradient-to-r from-purple-500 to-indigo-500 p-4 md:p-6 relative overflow-hidden">
-        <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center z-10 relative">
-            <a href="#" class="text-2xl md:text-3xl font-bold text-white">Portfolio</a>
-            <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-white">
-                <li><a href="#profile" class="hover:text-yellow-300 transition duration-300">About me</a></li>
-                <li><a href="#education" class="hover:text-yellow-300 transition duration-300">Education</a></li>
-                <li><a href="#projects" class="hover:text-yellow-300 transition duration-300">Projects</a></li>
-                <li><a href="#skills" class="hover:text-yellow-300 transition duration-300">Skills</a></li>
-                <li><a href="#experience" class="hover:text-yellow-300 transition duration-300">Practical Work</a></li>
-                <li><a href="#additional-info" class="hover:text-yellow-300 transition duration-300">Additional Infos</a></li>
-                <li><a href="#contact" class="hover:text-yellow-300 transition duration-300">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="container mx-auto text-center py-10 md:py-20 relative z-10">
-            <h1 class="text-4xl md:text-6xl font-extrabold text-white drop-shadow-md" id="hero-title">Welcome to my portfolio</h1>
-            <p class="text-xl md:text-3xl mt-4 text-white drop-shadow-md" id="hero-subtitle">I'm Taher Karimdjee</p>
-            <div id="lottie-animation" class="w-32 h-32 md:w-48 md:h-48 mx-auto mt-8"></div>
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 opacity-50"></div>
-        <div class="absolute bottom-0 left-0 w-full h-24 bg-white transform rotate-12 skew-y-2 opacity-10"></div>
-    </header>
-    
-
-    <!-- <section id="about" class="container mx-auto py-10 md:py-20">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-6 md:mb-12" data-aos="fade-up">À propos de moi</h2>
-        <div class="flex flex-col md:flex-row justify-center items-center">
-            <img src="images/moi2.jpg" alt="Profile Picture" class="rounded-full w-24 h-24 md:w-32 md:h-32 shadow-lg mb-6 md:mb-0" data-aos="fade-right">
-            
-            <p class="text-lg md:text-xl ml-0 md:ml-8" data-aos="fade-left">
-                Passionate about cybersecurity, I have strong skills in protecting networks and IoT devices from cyber threats. I am currently seeking a technician internship in this field, as well as a 12-month professionalization contract to apply my knowledge and contribute to innovative projects.
-            </p>
-            <p class="text-lg md:text-xl ml-0 md:ml-8" data-aos="fade-left">
-                My academic journey and projects have allowed me to acquire expertise in network security management, programming, and risk management. I am determined, meticulous, and always looking for new opportunities to improve my skills and help companies secure their infrastructures.
-            </p> ffdfddddfdffgfdgs
-        </div>
-    </section> -->
-    
-
-    <section id="profile" class="container mx-auto py-10 md:py-20">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
-            <div class="w-full md:w-1/3 mb-6 md:mb-0">
-                <img src="images/moi4.jpg" alt="Profile Photo" class="rounded-full mx-auto w-3/4 md:w-full shadow-lg">
-            </div>
-            <div class="w-full md:w-2/3 text-left md:pl-10">
-                <h2 class="text-3xl md:text-5xl font-bold text-yellownot-300 mb-6 md:mb-12 text-center md:text-left">About me</h2>
-                <p class="text-lg md:text-xl text-whitee-300 mb-4">
-                    22 years old French engineering student. Currently, I am a fourth-year student at ESIGELEC Rouen, specializing in network and IoT cybersecurity. My goal is to become a cybersecurity engineer.
-                </p>
-                <p class="text-lg md:text-xl text-whitee-300 mb-4">
-                    Passionate about cybersecurity, I have strong skills and enjoy participating in CTF Challenges in my free time, either with friends or alone. I am currently seeking a technician internship in this field, as well as a 12-month professionalization contract to apply my knowledge and contribute to innovative projects.
-                </p>
-                <!-- <p class="text-lg md:text-xl text-whitee-300 mb-4">
-                    My academic journey and projects have allowed me to acquire expertise in network security management and programming. I am determined, meticulous, and always looking for new opportunities to improve my skills.
-                </p> -->
-            </div>
-        </div>
-    </section>
-    
-    <section id="education" class="bg-gray-80000 py-10 md:py-20">
-        <h2 class="text-3xl md:text-5xl font-bold text-center text-yellow-3000 mb-6 md:mb-12" data-aos="fade-up">Education</h2>
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 gap-4">
-                <!-- Engineering Degree -->
-                <div class="education-card p-4 bg-gray-7000 rounded-lg shadow-lg" data-aos="fade-up">
-                    <h3 class="text-xl font-bold mb-2 text-blue-4000">SEPT 2022 - JUN 2025</h3>
-                    <p class="mb-2 text-lg text-whitee font-bold">Engineering Degree in Cybersecurity of Networks and IoT</p>
-                    <p class="mb-2 text-whitee">ESIGELEC, Rouen, France</p>
-                    <p class="mb-4">
-                        <a href="https://www.esigelec.fr/fr/cybersecurite-des-reseaux-et-de-liot" class="detailss-btn">More details</a>
-                    </p>
-                </div>
-                <!-- CPGE -->
-                <div class="education-card p-4 bg-gray-7000 rounded-lg shadow-lg" data-aos="fade-up">
-                    <h3 class="text-xl font-bold mb-2 text-blue-4000">SEPT 2019 - JUN 2022</h3>
-                    <p class="mb-2 text-lg text-whitee font-bold">CPGE PC</p>
-                    <p class="mb-2 text-whitee">Lycée Leconte de Lisle, Saint-Denis, La Réunion</p>
-                </div>
-                <!-- High School Diploma -->
-                <div class="education-card p-4 bg-gray-7000 rounded-lg shadow-lg" data-aos="fade-up">
-                    <h3 class="text-xl text-blue-4000 font-bold mb-2 text-blue-4000">JUN 2019</h3>
-                    <p class="mb-2 text-lg text-whitee font-bold">Baccalauréat S with honors</p>
-                    <p class="mb-2 text-whitee">Lycée Sarda Garriga, Saint-André, La Réunion</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    
-
-   
-    
-    
- 
-    
-
-    <section id="projects" class="bg-gray-800 py-10 md:py-20">
-        <h2 class="text-3xl md:text-5xl font-bold text-center text-yellow-3010 mb-6 md:mb-12" data-aos="fade-up">Projects</h2>
-        
-        <div class="flex flex-wrap justify-center">
-            <!-- Network Architecture Project -->
-            <div class="project-card m-4 p-6 bg-gray-700 rounded-lg shadow-lg text-left transform transition-transform hover:scale-105" data-aos="fade-up">
-                <h3 class="text-2xl font-bold mb-4 text-blue-400">Network Architecture Project</h3>
-                <p class="mb-4">Project completed at the end of the 4th year of engineering school</p>
-                <p class="mb-4">Set up a secure local network for a gaming championship (use of the SCRUM methodology).</p>
-                <button class="details-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="toggleDetails(this)">Details</button>
-                <div class="project-details mt-4 hidden">
-                    <h4 class="text-xl font-bold mb-2">Project Description</h4>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>Set up a network and system infrastructure allowing users to play. The game organizer can create tournaments.</li>
-                        <li>Implement network security backups for the configurations of routers/switches, tournament history, and the distribution and segmentation of a Class C IP address into 3 subnets.</li>
-                        <li>Players must be able to connect to the network via WiFi, access a website through their session, and receive an email when it is their turn to play (set up an email server).</li>
-                    </ul>
-                    <h4 class="text-xl font-bold mb-2">Proposed Solution</h4>
-                    <h5 class="text-lg font-bold mb-1">Network Part:</h5>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>A router to interconnect the city with the rest of the world</li>
-                        <li>An IP addressing plan</li>
-                        <li>A backup of the configuration on a server</li>
-                        <li>LAN traffic security</li>
-                    </ul>
-                    <h5 class="text-lg font-bold mb-1">System Part:</h5>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>A web server, hosting the website for displaying scores and launching games</li>
-                        <li>A mail server and a webmail for appointment messages</li>
-                        <li>DNS server for resolving DMZ and Trusted names</li>
-                        <li>An Active Directory directory server to authenticate players</li>
-                    </ul>
-                    <h5 class="text-lg font-bold mb-1">Match Management:</h5>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>A secure web interface for displaying results (protected by directory login/password)</li>
-                        <li>The ability to launch a server to host a competition (Administrator)</li>
-                        <li>To prevent cheating, the player must have the game and only the game on their screen</li>
-                    </ul>
-                    <!-- <h4 class="text-xl font-bold mb-2">Deliverables</h4>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>Network plan</li>
-                        <li>Installation procedures for each equipment</li>
-                        <li>Database schema</li>
-                        <li>Web application (PHP)</li>
-                        <li>Test scenario</li>
-                    </ul> -->
-                    <h4 class="text-xl font-bold mb-2">What I learned from this project</h4>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>Gained a better understanding of the agile SCRUM methodology in a project: it is a very efficient method, based on good communication among the team and daily meetings.</li>
-                        <li>Deployed network services: it was the first project in which I used real hardware, as we usually simulate everything on Cisco Packet Tracer in class to learn the basic commands.</li>
-                        <li>Developed a website: I've had experience in this field before, but this time I was completely in charge of implementing and updating the site. I learned more about the functioning of GitHub, beyond just "push" and "pull", understanding how branches work and their usefulness. I also enjoyed discovering dynamic animations on the web with JavaScript. This project is actually the reason why I decided to create this portfolio.</li>
-                        <li>This project required knowing the basic commands, both in shell and Cisco IOS.</li>
-                        <li>Increased knowledge: learned about backups (discovered Oxidized) and how easy it is to set up WiFi for a network.</li>
-                    </ul>
-                    
-                    <h4 class="text-xl font-bold mb-2">Prerequisites</h4>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>TCP/IP Networks</li>
-                        <li>Cisco IOS</li>
-                        <li>Linux Shell</li>
-                        <li>Web</li>
-                        <li>PHP</li>
-                        <li>VirtualBox</li>
-                        <li>Windows Server (An Active Directory)</li>
-                        <li>Apache</li>
-                        <li>SMTP</li>
-                        
-                    </ul>
-                    <!-- Swiper -->
-                    <div class="swiper-container project-carousel detailsm">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="images/image1.jpg" alt="Project Image 1"></div>
-                            <div class="swiper-slide"><img src="images/image2.jpg" alt="Project Image 2"></div>
-                            <div class="swiper-slide"><img src="images/image3.jpg" alt="Project Image 3"></div>
-                            <div class="swiper-slide"><img src="images/image4.jpg" alt="Project Image 3"></div>
-                            <div class="swiper-slide"><img src="images/image5.jpg" alt="Project Image 3"></div>
-                            <div class="swiper-slide"><img src="images/image6.jpg" alt="Project Image 3"></div>
-                            <div class="swiper-slide"><img src="images/image7.jpg" alt="Project Image 3"></div>
-                            <div class="swiper-slide"><img src="images/image8.jpg" alt="Project Image 3"></div>
-                        </div>
-                        <!-- Add Pagination -->
-                        <div class="swiper-pagination"></div>
-                        <!-- Add Navigation -->
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
+<body class="sb-nav-fixed">
+    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <a class="navbar-brand ps-3" href="index.html">Taher Karimdjee</a>
+        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <li class="nav-item">
+                <a class="nav-link" href="https://github.com/Reeperc/" target="_blank"><i class="fab fa-github"></i></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.linkedin.com/in/taherkarimdjee/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                <div class="sb-sidenav-menu">
+                    <div class="nav">
+                        <div class="sb-sidenav-menu-heading">Core</div>
+                        <a class="nav-link" href="index.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                            Home
+                        </a>
+                        <div class="sb-sidenav-menu-heading">Portfolio</div>
+                        <a class="nav-link" href="#about-me" data-scroll-target="about-me">
+                            <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
+                            About Me
+                        </a>
+                        <a class="nav-link" href="#education" data-scroll-target="education">
+                            <div class="sb-nav-link-icon"><i class="fas fa-graduation-cap"></i></div>
+                            Education
+                        </a>
+                        <a class="nav-link" href="#projects" data-scroll-target="projects">
+                            <div class="sb-nav-link-icon"><i class="fas fa-project-diagram"></i></div>
+                            Projects
+                        </a>
+                        <a class="nav-link" href="#skills" data-scroll-target="skills">
+                            <div class="sb-nav-link-icon"><i class="fas fa-laptop-code"></i></div>
+                            Skills
+                        </a>
+                        <a class="nav-link" href="#practical-work" data-scroll-target="practical-work">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tools"></i></div>
+                            Practical Work
+                        </a>
+                        <a class="nav-link" href="#soft-skills" data-scroll-target="soft-skills">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tools"></i></div>
+                            Soft skills
+                        </a>
+                        <a class="nav-link" href="#interests" data-scroll-target="interests">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tools"></i></div>
+                            Interests
+                        </a>
+                        <a class="nav-link" href="#languages" data-scroll-target="languages">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tools"></i></div>
+                            Languages
+                        </a>
+                        <a class="nav-link" href="#additional-info" data-scroll-target="additional-info">
+                            <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
+                            Additional Infos
+                        </a>
+                        <a class="nav-link" href="#contact" data-scroll-target="contact">
+                            <div class="sb-nav-link-icon"><i class="fas fa-envelope"></i></div>
+                            Contact Me
+                        </a>
+                        <!-- New Project Subcategories -->
+                        <div class="sb-sidenav-menu-heading">Project Details</div>
+                        <a class="nav-link" href="network-architecture.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-network-wired"></i></div>
+                            Network Architecture
+                        </a>
+                        <a class="nav-link" href="robot-programming.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-robot"></i></div>
+                            Robot Programming
+                        </a>
+                        <a class="nav-link" href="solidarity-project.html">
+                            <div class="sb-nav-link-icon"><i class="fas fa-hand-holding-heart"></i></div>
+                            Solidarity Project
+                        </a>
                     </div>
                 </div>
-            </div>
+                <div class="sb-sidenav-footer">
+                    <div class="small">Contact me</div>
+                    +33-783-689-984
+                    taher.karimdjee@groupe-eesigelec.org 
+                </div>
+            </nav>
+        </div>
+        <div id="layoutSidenav_content">
+            <main>
+                <div class="container-fluid px-4">
+                    <h1 class="mt-4 section-title">Welcome to my portfolio</h1>
+                    <p class="text-center">I'm Taher Karimdjee</p>
 
-             <!-- Robot Programming and Assembly Project -->
-        <div class="project-card m-4 p-6 bg-gray-700 rounded-lg shadow-lg text-left transform transition-transform hover:scale-105" data-aos="fade-up">
-            <h3 class="text-2xl font-bold mb-4 text-blue-400">Robot Programming and Assembly</h3>
-            <p class="mb-4">Participated in a robotics competition with a team.</p>
-            <p class="mb-4">Programming and assembling a microcontroller-based robot using C language.</p>
-            <button class="details-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="toggleDetails(this)">Details</button>
-            <div class="project-details mt-4 hidden">
-                <h4 class="text-xl font-bold mb-2">Project Description</h4>
-                <ul class="list-disc list-inside mb-4">
-                    <li>Designed and assembled a robot for a competitive event</li>
-                    <li>Developed control algorithms in C for various robotic tasks</li>
-                    <li>Integrated sensors and actuators to enhance robot capabilities</li>
-                </ul>
-                <h4 class="text-xl font-bold mb-2">Proposed Solution</h4>
-                <h5 class="text-lg font-bold mb-1">Hardware Part:</h5>
-                <ul class="list-disc list-inside mb-4">
-                    <li>Selected and assembled appropriate microcontroller and components</li>
-                    <li>Integrated various sensors (IR, ultrasonic, etc.) for obstacle detection and navigation</li>
-                    <li>Designed and implemented power management for the robot</li>
-                </ul>
-                <h5 class="text-lg font-bold mb-1">Software Part:</h5>
-                <ul class="list-disc list-inside mb-4">
-                    <li>Developed control algorithms in C for robot movement and task execution</li>
-                    <li>Implemented real-time data processing and decision-making</li>
-                    <li>Tested and debugged the software to ensure reliable performance</li>
-                </ul>
-                <h5 class="text-lg font-bold mb-1">Competition Outcomes:</h5>
-                <ul class="list-disc list-inside mb-4">
-                    <li>Robot successfully completed the assigned tasks</li>
-                    <li>Achieved high rankings in various categories (speed, accuracy, etc.)</li>
-                    <li>Learned valuable lessons in teamwork and project management</li>
-                </ul>
-                <!-- Swiper -->
-                <div class="swiper-container project-carousel detailsm">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/robot3.jpg" alt="Project Image 9"></div>
-                        <div class="swiper-slide"><img src="images/robot4.jpg" alt="Project Image 10"></div>
-                        <div class="swiper-slide">
-                            <video controls id="projectVideo">
-                                <source src="videos/robot.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                    <div class="card mb-4">
+                        <div id="about-me" class="card-header scroll-offset">
+                            <i class="fas fa-user me-1"></i>
+                            About Me
+                        </div>
+                        <div class="card-body">
+                            <div class="about-me-container">
+                                <img src="images/moi4.jpg" alt="Taher's Photo">
+                                <div class="text">
+                                    <p>22 years old French engineering student.</p>
+                                    <p>Currently, I am a fourth-year student at ESIGELEC Rouen, specializing in network and IoT cybersecurity.</p>
+                                    <p>My goal is to become a cybersecurity engineer.</p>
+                                    <p>Passionate about cybersecurity, I have strong skills and enjoy participating in CTF Challenges in my free time, either with friends or alone.</p>
+                                    <p>I am currently seeking a technician internship in this field, as well as a 12-month professionalization contract to apply my knowledge and contribute to innovative projects.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-                </div>
-                
-            </div>
-        </div>
-         <!-- Solidarity Project -->
-         <div class="project-card m-4 p-6 bg-gray-700 rounded-lg shadow-lg text-left transform transition-transform hover:scale-105" data-aos="fade-up"">
-            <h3 class="text-2xl font-bold mb-4 text-blue-400">Solidarity Project</h3>
-            <p class="mb-4">Organizing an inclusive sports event for students at Camille Claudel Middle School, Rouen.</p>
-            <button class="details-btn bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="toggleDetails(this)">Details</button>
-            <div class="project-details mt-4 hidden">
-                <h4 class="text-xl font-bold mb-2">Project Description</h4>
-                <ul class="list-disc list-inside mb-4">
-                    <li>Organizing an inclusive sports event over a period of 6 months.</li>
-                    <li>Collaborating with a team of 5 students and the DUC Dieppe club.</li>
-                    <li>The event allowed students from Camille Claudel Middle School to discover wheelchair rugby.</li>
-                    <li>Participation in workshops and wheelchair rugby matches.</li>
-                </ul>
-                <h4 class="text-xl font-bold mb-2">Event Details</h4>
-                <ul class="list-disc list-inside mb-4">
-                    <li>Planning and coordinating the event with the DUC Dieppe club.</li>
-                    <li>Communication and logistical organization with participants and supervisors.</li>
-                    <li>Creating and managing interactive workshops to raise awareness and introduce students to wheelchair rugby.</li>
-                    <li>Supervision and refereeing of matches to ensure a positive and safe experience.</li>
-                </ul>
-                <h4 class="text-xl font-bold mb-2">Results and Impact</h4>
-                <ul class="list-disc list-inside mb-4">
-                    <li>Active and enthusiastic participation from students and supervisors.</li>
-                    <li>Increased awareness of inclusion and adaptive sports.</li>
-                    <li>Enhanced organizational and leadership skills among participants.</li>
-                    <li>Established lasting connections between students and local sports clubs.</li>
-                </ul>
-                <p class="mb-4">Duration: October 2022 – April 2023</p>
-                <div class="swiper-container project-carousel detailsm">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="images/image16.jpg" alt="Project Image 3"></div>
-                        <div class="swiper-slide"><img src="images/image10.jpg" alt="Project Image 1"></div>
-                        <div class="swiper-slide"><img src="images/image12.jpg" alt="Project Image 2"></div>
-                        <div class="swiper-slide"><img src="images/image13.jpg" alt="Project Image 3"></div>
-                        <div class="swiper-slide"><img src="images/image14.jpg" alt="Project Image 3"></div>
-                        <div class="swiper-slide"><img src="images/image15.jpg" alt="Project Image 3"></div>
-                        <div class="swiper-slide"><img src="images/image11.jpg" alt="Project Image 3"></div>
-                        <!-- <div class="swiper-slide"><img src="images/image8.jpg" alt="Project Image 3"></div> -->
+
+                    <div class="card mb-4">
+                        <div id="education" class="card-header scroll-offset">
+                            <i class="fas fa-graduation-cap me-1"></i>
+                            Education
+                        </div>
+                        <div class="card-body">
+                            <p><strong>SEPT 2022 - JUN 2025:</strong> Engineering Degree in Cybersecurity of Networks and IoT, ESIGELEC, Rouen, France</p>
+                            <p><strong>SEPT 2019 - JUN 2022:</strong> CPGE PC, Lycée Leconte de Lisle, Saint-Denis, La Réunion</p>
+                            <p><strong>JUN 2019:</strong> Baccalauréat S with honors, Lycée Sarda Garriga, Saint-André, La Réunion</p>
+                        </div>
                     </div>
-                    <!-- Add Pagination -->
-                    <div class="swiper-pagination"></div>
-                    <!-- Add Navigation -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-        </div>
-        
-    </section>
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    
-    
-    <section id="experience" class="bg-gray-8000 py-10 md:py-20" >
-        <h2 class="text-3xl md:text-5xl font-bold text-center text-yellow-300 mb-6 md:mb-12" data-aos="fade-up">Practical Work</h2>
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" >
-                <!-- Securing Web Applications -->
-                <div class="experience-card p-4 bg-gray-7000 rounded-lg shadow-lg" data-aos="fade-up">
-                    <h3 class="text-xl font-bold mb-2 text-blue-4001">Securing Web Applications</h3>
-                    <p class="mb-4">Objective: Identify and correct web vulnerabilities.</p>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>SQL Injection and XSS: Simulations and protections (DVWA, OWASP ZAP).</li>
-                        <li>Protection against Phishing.</li>
-                        <li>Tools: OWASP ZAP, Hack Splaining.</li>
-                    </ul>
-                </div>
-                <!-- Encryption and Ransomware Attack -->
-                <div class="experience-card p-4 bg-gray-7000 rounded-lg shadow-lg" data-aos="fade-up">
-                    <h3 class="text-xl font-bold mb-2 text-blue-4001">Encryption and Ransomware Attack</h3>
-                    <p class="mb-4">Objective: Understand cryptography and simulate ransomware attacks.</p>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>AES, RSA, TLS, Digital Signature (OpenSSL).</li>
-                        <li>Development and simulation of ransomware.</li>
-                        <li>Tools: OpenSSL, Kali Linux, Windows 7.</li>
-                    </ul>
-                </div>
-                <!-- Trojan: Control and Protection -->
-                <div class="experience-card p-4 bg-gray-7000 rounded-lg shadow-lg" data-aos="fade-up">
-                    <h3 class="text-xl font-bold mb-2 text-blue-4001">Trojan: Control and Protection</h3>
-                    <p class="mb-4">Objective: Understand and protect against Trojans.</p>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>Creation and dissemination of trojans (Shellter, Metasploit).</li>
-                        <li>Control and security (netstat, taskkill).</li>
-                        <li>Tools: Kali Linux, Windows 7, Shellter, Metasploit.</li>
-                    </ul>
-                </div>
-                <!-- EBIOS Risk Manager -->
-                <div class="experience-card p-4 bg-gray-7000 rounded-lg shadow-lg" data-aos="fade-up">
-                    <h3 class="text-xl font-bold mb-2 text-blue-4001">EBIOS Risk Manager</h3>
-                    <p class="mb-4">Objective: Risk study according to EBIOS.</p>
-                    <ul class="list-disc list-inside mb-4">
-                        <li>Risk analysis of the information system of an ID renewal (in France).</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="skills" class="container-skills mx-auto py-10 md:py-20">
-        <h2 class="text-3xl md:text-5xl font-bold text-center mb-6 md:mb-12">Hard Skills</h2>
-        <div class="flex flex-wrap justify-center">
-            <div class="skill-card m-4 p-6 bg-gradient-to-r from-teal-400 to-blue-500 rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Programming</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>Python</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>C</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>SQL</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-code text-2xl mr-2"></i>Java</div>
-                </div>
-            </div>
-            <div class="skill-card3 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Web Development</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-html5 text-2xl mr-2"></i>HTML</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-css3-alt text-2xl mr-2"></i>CSS</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-js text-2xl mr-2"></i>JavaScript</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-php text-2xl mr-2"></i>PHP</div>
-                </div>
-            </div>
-            <div class="skill-card4 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="400">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Virtualization & OS</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-windows text-2xl mr-2"></i>Windows Server</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-cube text-2xl mr-2"></i>VM VirtualBox</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-server text-2xl mr-2"></i>VMware</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-linux text-2xl mr-2"></i>Linux Server</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-terminal text-2xl mr-2"></i>Shell Linux</div>
-                </div>
-            </div>
-            <div class="skill-card5 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Tools & Software</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>MFA</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>Secureboot</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-users-cog text-2xl mr-2"></i>Citrix</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>OrCAD</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>MS Office</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-database text-2xl mr-2"></i>Oracle SQL Developer</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>MySQL</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-apache text-2xl mr-2"></i>Apache</div>
-                    <!-- <div class="skill-item flex items-center m-2"><i class="fas fa-server text-2xl mr-2"></i>Git</div> -->
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-github text-2xl mr-2"></i>GitHub</div>
-                    <div class="skill-item flex items-center m-2"><i class="fab fa-linux text-2xl mr-2"></i>Linux</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>Wireshark</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-shield-alt text-2xl mr-2"></i>Burp Suite</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-folder text-2xl mr-2"></i>WinSCP</div>
-                </div>
-            </div>
-            <div class="skill-card2 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="300">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">Networks & Security</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>TCP/IP</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>SMTP</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-network-wired text-2xl mr-2"></i>Cisco IOS</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-server text-2xl mr-2"></i>Router/Switch Configuration</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-firewall text-2xl mr-2"></i>Firewalls</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>pfSense</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-users-cog text-2xl mr-2"></i>Active Directory (LDAP)</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>SIEM</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>SOC</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>SOAR</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>IDPS</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>EDR</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>XDR</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>NSX</div>
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-shield-alt text-2xl mr-2"></i>EBIOS Risk Manager</div>
-                </div>
-            </div>
-            
-            <!-- <div class="skill-card6 m-4 p-6  rounded-lg shadow-lg text-center transition-transform transform hover:scale-105" data-aos="fade-up" data-aos-delay="500">
-                <h3 class="text-xl md:text-2xl font-bold mb-4">knowledge</h3>
-                <div class="flex flex-wrap justify-center">
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-exclamation-triangle text-2xl mr-2"></i>All4tec</div>
+                    <div class="card mb-4">
+                        <div id="projects" class="card-header scroll-offset">
+                            <i class="fas fa-project-diagram me-1"></i>
+                            Projects
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Network Architecture Project:</strong> Project completed at the end of the 4th year of engineering school. Set up a secure local network for a gaming championship (use of the SCRUM methodology).</p>
+                            <button class="btn-details" onclick="location.href='network-architecture.html'">Details</button>
+                            <p><strong>Robot Programming and Assembly:</strong> Participated in a robotics competition with a team. Programming and assembling a microcontroller-based robot using C language.</p>
+                            <button class="btn-details" onclick="location.href='robot-programming.html'">Details</button>
+                            <p><strong>Solidarity Project:</strong> Organizing an inclusive sports event for students at Camille Claudel Middle School, Rouen.</p>
+                            <button class="btn-details" onclick="location.href='solidarity-project.html'">Details</button>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div id="skills" class="card-header scroll-offset">
+                            <i class="fas fa-laptop-code me-1"></i>
+                            Hard Skills
+                        </div>
+                        <div class="card-body">
+                            <!-- <h3 class="text-center"> Hards Skills</h3> -->
+                            <div class="skills-container">
+                                <div class="skill-card">
+                                    <h4><i class="fas fa-code"></i> Programming</h4>
+                                    <ul>
+                                        <li>Python</li>
+                                        <li>C</li>
+                                        <li>SQL</li>
+                                        <li>Java</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-card">
+                                    <h4><i class="fas fa-globe"></i> Web Development</h4>
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>PHP</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-card">
+                                    <h4><i class="fas fa-server"></i> Virtualization & OS</h4>
+                                    <ul>
+                                        <li>Windows Server</li>
+                                        <li>VM VirtualBox</li>
+                                        <li>VMware</li>
+                                        <li>Linux Server</li>
+                                        <li>Shell Linux</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-card">
+                                    <h4><i class="fas fa-tools"></i> Tools & Software</h4>
+                                    <ul>
+                                        <li>MFA</li>
+                                        <li>Secureboot</li>
+                                        <li>Citrix</li>
+                                        <li>OrCAD</li>
+                                        <li>MS Office</li>
+                                        <li>Oracle SQL Developer</li>
+                                        <li>MySQL</li>
+                                        <li>Apache</li>
+                                        <li>GitHub</li>
+                                        <li>Linux</li>
+                                        <li>Wireshark</li>
+                                        <li>Burp Suite</li>
+                                        <li>WinSCP</li>
+                                    </ul>
+                                </div>
+                                <div class="skill-card">
+                                    <h4><i class="fas fa-network-wired"></i> Networks & Security</h4>
+                                    <ul>
+                                        <li>TCP/IP</li>
+                                        <li>SMTP</li>
+                                        <li>Cisco IOS</li>
+                                        <li>Router/Switch Configuration</li>
+                                        <li>Firewalls</li>
+                                        <li>pfSense</li>
+                                        <li>Active Directory (LDAP)</li>
+                                        <li>SIEM</li>
+                                        <li>SOC</li>
+                                        <li>SOAR</li>
+                                        <li>IDPS</li>
+                                        <li>EDR</li>
+                                        <li>XDR</li>
+                                        <li>NSX</li>
+                                        <li>EBIOS Risk Manager</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div id="practical-work" class="card-header scroll-offset">
+                            <i class="fas fa-tools me-1"></i>
+                            Practical Work
+                        </div>
+                        <div class="card-body">
+                            <p><strong>Securing Web Applications:</strong> Objective: Identify and correct web vulnerabilities. SQL Injection and XSS: Simulations and protections (DVWA, OWASP ZAP). Protection against Phishing. Tools: OWASP ZAP, Hack Splaining.</p>
+                            <p><strong>Encryption and Ransomware Attack:</strong> Objective: Understand cryptography and simulate ransomware attacks. AES, RSA, TLS, Digital Signature (OpenSSL). Development and simulation of ransomware. Tools: OpenSSL, Kali Linux, Windows 7.</p>
+                            <p><strong>Trojan: Control and Protection:</strong> Objective: Understand and protect against Trojans. Creation and dissemination of trojans (Shellter, Metasploit). Control and security (netstat, taskkill). Tools: Kali Linux, Windows 7, Shellter, Metasploit.</p>
+                            <p><strong>EBIOS Risk Manager:</strong> Objective: Risk study according to EBIOS. Risk analysis of the information system of an ID renewal (in France).</p>
+                        </div>
+                    </div>
+
                     
-                    <div class="skill-item flex items-center m-2"><i class="fas fa-tools text-2xl mr-2"></i>pfSense</div>
 
-                
+                    <div class="card mb-4">
+                        <div id="soft-skills" class="card-header scroll-offset">
+                            <i class="fas fa-handshake me-1"></i>
+                             Soft skills
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Communication</li>
+                                <li>Team Work</li>
+                                <li>Work Ethic</li>
+                                <li>Curiosity</li>
+                                <li>Motivation</li>
+                                <li>Rigorous</li>
+                                <li>Autonomous</li>
+                                <li>Organized</li>
+                                <li>Able to work under pressure</li>
+                                <li>Stress management skills</li>
+                                <li>Committed</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div id="interests" class="card-header scroll-offset">
+                            <i class="fas fa-gamepad me-1"></i>
+                             Interests
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>Piano (6 years)</li>
+                                <li>CTF Challenges</li>
+                                <li>Scuba Diving</li>
+                                <li>Hiking</li>
+                                <li>Drawing</li>
+                            </ul>
+                            
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div id="languages" class="card-header scroll-offset">
+                            <i class="fas fa-language me-1"></i>
+                            Languages
+                        </div>
+                        <div class="card-body">
+                            <!-- <h3>Languages:</h3> -->
+                            <ul>
+                                <li>French: Fluent (native speaker)</li>
+                                <li>English: Advanced (B2, TOEIC 890)</li>
+                                <li>German: Basic (A2)</li>
+                                <li>Japanese: Basic (A1)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div id="additional-info" class="card-header scroll-offset">
+                            <i class="fas fa-info-circle me-1"></i>
+                            Additional information
+                        </div>
+                        <div class="card-body">
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-map-marker-alt text-blue-400 mr-2"></i>
+                                Rouen, France
+                            </div>
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-phone-alt text-blue-400 mr-2"></i>
+                                +33-783-689-984
+                            </div>
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-envelope text-blue-400 mr-2"></i>
+                                taher.karimdjee@groupe-eesigelec.org
+                            </div>
+                            <div class="flex items-center mb-2">
+                                <i class="fas fa-birthday-cake text-blue-400 mr-2"></i>
+                                22/01/2002
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="contact" class="card mb-4">
+                        <div class="card-header scroll-offset">
+                            <i class="fas fa-envelope me-1"></i>
+                            Contact Me
+                        </div>
+                        <div class="card-body">
+                            <form id="contact-form">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" name="user_name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="email" name="user_email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </form>
+                            <div id="status-message" class="mt-3"></div>
+                        </div>
+                    </div>
+                    
+
                 </div>
-            </div> -->
+            </main>
+            <footer class="py-4 bg-dark mt-auto">
+                <div class="container-fluid px-4">
+                    <div class="d-flex align-items-center justify-content-between small">
+                        <div class="text-muted">Taher's Portfolio &copy; 2024</div>
+                        <div class="footer-links">
+                            <a href="#"></a>
+                            <!-- &middot; -->
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-    </section>
-    
-    <!-- AOS Library for animations -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            easing: 'ease-in-out',
-            once: false,
+        document.addEventListener("DOMContentLoaded", function() {
+            const navbarHeight = document.querySelector(".sb-topnav").offsetHeight;
+            const links = document.querySelectorAll('.nav-link[data-scroll-target]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('data-scroll-target');
+                    const targetElement = document.getElementById(targetId);
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <script>
+        (function(){
+            emailjs.init("m31XodcdB3-286Qxg");
+        })();
+    </script>
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            emailjs.sendForm('service_3bombh4', 'template_ggu56mr', this)
+                .then(function(response) {
+                    document.getElementById('status-message').innerHTML = '<div class="alert alert-success" role="alert">Message sent successfully!</div>';
+                }, function(error) {
+                    document.getElementById('status-message').innerHTML = '<div class="alert alert-danger" role="alert">Failed to send message. Please try again later.</div>';
+                });
         });
     </script>
     
-    
-
-    <section id="professional-experience" class="bg-gray-8008 py-10 md:py-20">
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-yellow-300 mb-6 md:mb-12" data-aos="fade-up">Other Experience and Projects</h2>
-        <div class="container mx-auto px-4">
-            <div class="experience-card p-4 bg-gray-7008 rounded-lg shadow-lg mb-6" data-aos="fade-up">
-                <h3 class="text-xl font-bold mb-2 text-blue-400">Pet Store Advisor</h3>
-            <p class="mb-2"><strong>Jardinerie Poullain, Le Petit-Quevilly</strong> - SEP 2023 - FEB 2024</p>
-            <ul class="list-disc list-inside mb-4">
-                <li>Personalized customer guidance</li>
-                <li>Responsible for stock management and the pet store section</li>
-                <li>Administration of daily care and monitoring of animals</li>
-                <li>Application of SCRUM methodology</li>
-            </ul>
-            <p class="mb-2">I practiced the SCRUM methodology for the first time in a business setting through this student job. I developed my organizational and communication skills, as well as stress management when dealing with unpredictable customers. Nonetheless, I have fond memories of this experience thanks to the wonderful team I had the pleasure of working with.</p>
-        </div>
-        </div>
-    
-        <!-- <h2 class="text-3xl md:text-4xl font-bold text-center text-yellow-300 mb-6 md:mb-12" data-aos="fade-up">Other Projects</h2> -->
-        <div class="container mx-auto px-4">
-            <div class="experience-card p-4 bg-gray-7008 rounded-lg shadow-lg mb-6" data-aos="fade-up">
-                <h3 class="text-xl font-bold mb-2 text-blue-400">Programming and Web Development</h3>
-             <ul class="list-disc list-inside mb-4">
-                <li>Development of a school management tool (Java, SQL – V-Model)</li>
-                <li>Development of an online gaming site (HTML, PHP, CSS, SQL)</li>
-                <li>Microcontroller programming and assembly: robot competition (C language)</li>
-            </ul>
-            </div>
-        </div>
-    </section>
-    
-    
-    <section id="additional-info" class="bg-gray-800 py-10 md:py-20" >
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-yellow-3010 mb-6 md:mb-12" data-aos="fade-up">Additional Information</h2>
-        <div class="container mx-auto px-4">
-            
-            <div class="additional-info-card p-4 bg-gray-700 rounded-lg shadow-lg mb-6" data-aos="fade-up">
-                <h3 class="text-xl font-bold mb-2 text-blue-400">Languages</h3>
-                <ul class="list-disc list-inside mb-4">
-                    <li>French: Fluent (native speaker)</li>
-                    <p></p>
-                    <li>English: Advanced (B2, TOEIC 890)</li>
-                    <li>German: Basic (A2)</li>
-                    <li>Japanese: Basic (A1)</li>
-                </ul>
-            </div>
-            <div class="additional-info-card p-4 bg-gray-700 rounded-lg shadow-lg" data-aos="fade-up">
-                <h3 class="text-xl font-bold mb-2 text-blue-400">Interests</h3>
-                <ul class="list-disc list-inside mb-4">
-                    <li>Aquarium, Plants</li>
-                    <li>Scuba Diving</li>
-                    <li>Hiking, Badminton</li>
-                    <li>Drawing, Piano</li>
-                    <li>CTF Challenges</li>
-                </ul>
-            </div>
-            <div class="additional-info-card p-4 bg-gray-700 rounded-lg shadow-lg" data-aos="fade-up">
-                <h3 class="text-xl font-bold mb-2 text-blue-400">Soft skills</h3>
-                <ul class="list-disc list-inside mb-4">
-                    <li>Communication</li>
-                    <li>Team Work</li>
-                    <li>Work Ethic</li>
-                    <li>Curiosity</li>
-                    <li>Motivation</li>
-                    <li>Rigorous</li>
-                    <li>Autonomous</li>
-                    <li>Organized</li>
-                    <li>Able to work under pressure</li>
-                    <li>Stress management skills</li>
-                    <li>Committed</li>
-                    <!-- <li>Emotional intelligence</li> -->
-                </ul>
-            </div>
-            <div class="additional-info-card-c-info p-4 bg-gray-700 rounded-lg shadow-lg mb-6" data-aos="fade-up">
-                <h3 class="text-xl font-bold mb-2 text-blue-400">Contact Information</h3>
-                <div class="flex items-center mb-2">
-                    <i class="fas fa-map-marker-alt text-blue-400 mr-2"></i>
-                    <p>Rouen, France</p>
-                </div>
-                <div class="flex items-center mb-2">
-                    <i class="fas fa-phone-alt text-blue-400 mr-2"></i>
-                    <p>+33-783-689-984</p>
-                </div>
-                <div class="flex items-center mb-2">
-                    <i class="fas fa-envelope text-blue-400 mr-2"></i>
-                    <p>taher.karimdjee@groupe-esigelec.org</p>
-                </div>
-                <div class="flex items-center mb-2">
-                    <i class="fas fa-birthday-cake text-blue-400 mr-2"></i>
-                    <p>22/01/2002</p>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-    
-
-    <section id="contact" class="container-coco mx-auto py-10 md:py-20">
-        <h2 class="text-3xl md:text-5xl font-bold text-center mb-6 md:mb-12 mimi" data-aos="fade-up">Contact</h2>
-        <form id="contact-form" class="max-w-lg mx-auto bg-whitee p-4 md:p-8 rounded-lg shadow-lg container-cocor" data-aos="fade-up">
-            <input type="text" name="name" placeholder="Your name" class="input-field" required>
-            <input type="email" name="email" placeholder="Your email" class="input-field" required>
-            <textarea name="message" placeholder="You message" class="input-field" required></textarea>
-            <div class="file-input-wrapper">
-                <input type="file" id="attachment" name="attachment" class="file-input" hidden>
-                <button type="button" class="file-input-btn" onclick="document.getElementById('attachment').click()">Choose a file</button>
-                <span id="file-chosen">No file selected</span>
-            </div>
-            <button type="submit" class="w-full py-4 bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 rounded-lg text-lg md:text-xl font-bold text-white"><i class="fas fa-paper-plane"></i> Send</button>
-        </form>
-    </section>
-
-    <footer class="bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-center">
-        <p>&copy; 2024 My Portfolio - Taher Karimdjee</p>
-        <div class="flex justify-center space-x-4 mt-4">
-            <a href="https://github.com/Reeperc" class="fab fa-github fa-2x text-white hover:text-yellow-300"></a>
-            <a href="https://www.linkedin.com/in/taherkarimdjee/" class="fab fa-linkedin fa-2x text-white hover:text-yellow-300"></a>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>        
 </body>
 </html>
-<script>
-    function toggleDetails(button) {
-        var details = button.nextElementSibling;
-        if (details.classList.contains('hidden')) {
-            details.classList.remove('hidden');
-            details.classList.add('show');
-            button.textContent = 'Less details';
-        } else {
-            details.classList.add('hidden');
-            details.classList.remove('show');
-            button.textContent = 'Détails';
-        }
-    }
-    </script>
-    
-    
-
-        <!-- Swiper JS -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-        <!-- Initialize Swiper -->
-        <script>
-            function toggleDetails(button) {
-                var details = button.nextElementSibling;
-                if (details.classList.contains('hidden')) {
-                    details.classList.remove('hidden');
-                    details.classList.add('show');
-                    button.textContent = 'Less details';
-                    initSwiper();
-                } else {
-                    details.classList.add('hidden');
-                    details.classList.remove('show');
-                    button.textContent = 'Details';
-                }
-            }
-        
-            function initSwiper() {
-                var swiper = new Swiper('.swiper-container', {
-                    loop: true,
-                    autoplay: {
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    },
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                });
-            }
-        </script>
-        
- <script>
-//     function initSwiper() {
-// var swiper = new Swiper('.swiper-container', {
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     },
-//     loop: false,
-//     autoplay: true,
-//     effect: 'slide',
-//     grabCursor: true,
-//     centeredSlides: true,
-//     slidesPerView: 'auto',
-//     spaceBetween: 30,
-//     on: {
-//         slideChange: function () {
-//             var video = document.getElementById('project-video');
-//             if (swiper.activeIndex === swiper.slides.length - 1) {
-//                 video.play();
-//                 Swiper( autoplay: false )
-//                 video.onended = function () {
-//                     swiper.slideNext();
-//                 };
-//             } else {
-//                 video.pause();
-//                 video.currentTime = 0;
-//             }
-//         }
-//     }
-
-// });
-//     }
-</script>
-        
-    
-</body>
-    
-    
