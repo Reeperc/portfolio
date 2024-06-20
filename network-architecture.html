@@ -21,6 +21,15 @@
             line-height: 1.6;
             transition: background-color 0.3s, color 0.3s;
         }
+        body {
+    background-image: url('blackfond.png');
+    background-size: cover; /* Make the background cover the whole screen */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-attachment: fixed; /* Make the background fixed during scroll */
+    background-position: center; /* Center the background image */
+    color: #fff; /* Ensure text color remains readable */
+    font-family: 'Arial', sans-serif;
+}
         .navbar, .card-header {
             background-color: #333;
             transition: background-color 0.3s;
@@ -78,6 +87,23 @@
             margin-bottom: 10px;
             color: #d1d1d1;
         }
+        .sb-sidenav {
+    background-color: #04182dd9; /* Change this to your desired background color */
+}
+
+.sb-sidenav .nav-link {
+    color: #ECF0F1; /* Change this to your desired text color */
+}
+
+.sb-sidenav .nav-link:hover {
+    background-color: #34495E; /* Change this to your desired hover background color */
+    color: #ECF0F1; /* Change this to your desired hover text color */
+}
+
+.sb-sidenav .sb-sidenav-footer {
+    background-color: #2C3E50; /* Match the footer background color to the sidenav */
+    color: #ECF0F1; /* Match the footer text color to the sidenav */
+}
     </style>
 </head>
 <body class="sb-nav-fixed">
@@ -147,11 +173,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="sb-sidenav-footer">
+                <!-- <div class="sb-sidenav-footer">
                     <div class="small">Contact me</div>
                     +33-783-689-984
                     taher.karimdjee@groupe-eesigelec.org 
-                </div>
+                </div> -->
             </nav>
         </div>
         <div id="layoutSidenav_content">
