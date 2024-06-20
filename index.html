@@ -15,12 +15,22 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
         
         body {
-            background-color: #121212;
+            /* background-color: #121212; */
             color: #fff;
             font-family: 'Roboto', sans-serif;
             line-height: 1.6;
             transition: background-color 0.3s, color 0.3s;
         }
+        body {
+    background-image: url('blackfond.png');
+    background-size: cover; /* Make the background cover the whole screen */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-attachment: fixed; /* Make the background fixed during scroll */
+    background-position: center; /* Center the background image */
+    color: #fff; /* Ensure text color remains readable */
+    font-family: 'Arial', sans-serif;
+}
+
         .navbar, .card-header {
             background-color: #333;
             transition: background-color 0.3s;
