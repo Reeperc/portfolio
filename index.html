@@ -81,11 +81,11 @@
             align-items: center;
         }
         .btn-details {
-            background-color: #97b9da;
+            background-color: #a1acb6;
             color: #1c2136;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 5px 15px;
+            border-radius: 20px;
             transition: background-color 0.3s, color 0.3s;
         }
         .btn-details:hover {
@@ -326,7 +326,7 @@
                             <div class="education-item mb-3">
                                 <div class="d-flex align-items-center mb-2">
                                     <i class="fas fa-university me-2"></i>
-                                    <h5 class="mb-0">Engineering Degree in Cybersecurity of Networks and IoT</h5>
+                                    <h4 class="mb-0">Engineering Degree in Cybersecurity of Networks and IoT</h4>
                                 </div>
                                 <p class="mb-0"><strong>ESIGELEC Rouen, France</strong></p>
                                 <p class="text-muted mb-0">SEPT 2022 - JUN 2025</p>
@@ -359,14 +359,26 @@
                             Projects
                         </div>
                         <div class="card-body">
-                            <p><strong>Network Architecture Project:</strong> Project completed at the end of the 4th year of engineering school. Set up a secure local network for a gaming championship (use of the SCRUM methodology).</p>
-                            <button class="btn-details" onclick="location.href='network-architecture.html'">Details</button>
-                            <p><strong>Robot Programming and Assembly:</strong> Participated in a robotics competition with a team. Programming and assembling a microcontroller-based robot using C language.</p>
-                            <button class="btn-details" onclick="location.href='robot-programming.html'">Details</button>
-                            <p><strong>Solidarity Project:</strong> Organizing an inclusive sports event for students at Camille Claudel Middle School, Rouen.</p>
-                            <button class="btn-details" onclick="location.href='solidarity-project.html'">Details</button>
+                            <div class="project-card">
+                                <h4><i class="fas fa-network-wired me-2"></i> Network Architecture Project</h4>
+                                <p>Project completed at the end of the 4th year of engineering school. Set up a secure local network for a gaming championship (use of the SCRUM methodology).</p>
+                                <button class="btn-details" onclick="location.href='network-architecture.html'">Details</button>
+                            </div>
+                            <hr>
+                            <div class="project-card">
+                                <h4><i class="fas fa-robot me-2"></i> Robot Programming and Assembly</h4>
+                                <p>Participated in a robotics competition with a team. Programming and assembling a microcontroller-based robot using C language.</p>
+                                <button class="btn-details" onclick="location.href='robot-programming.html'">Details</button>
+                            </div>
+                            <hr>
+                            <div class="project-card">
+                                <h4><i class="fas fa-hand-holding-heart me-2"></i> Solidarity Project</h4>
+                                <p>Organizing an inclusive sports event for students at Camille Claudel Middle School, Rouen.</p>
+                                <button class="btn-details" onclick="location.href='solidarity-project.html'">Details</button>
+                            </div>
                         </div>
                     </div>
+                    
 
                     <div class="card mb-4">
                         <div id="skills" class="card-header scroll-offset">
