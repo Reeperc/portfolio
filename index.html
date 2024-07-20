@@ -13,16 +13,15 @@
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-72JR4V90DE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-72JR4V90DE');
-</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-72JR4V90DE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-72JR4V90DE');
+    </script>
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
@@ -35,17 +34,21 @@
             transition: background-color 0.3s, color 0.3s;
         }
         body {
-    background-image: url('blackfond.png');
-    background-size: cover; /* Make the background cover the whole screen */
-    background-repeat: no-repeat; /* Prevent the background from repeating */
-    background-attachment: fixed; /* Make the background fixed during scroll */
-    background-position: center; /* Center the background image */
-    color: #fff; /* Ensure text color remains readable */
-    font-family: 'Arial', sans-serif;
-}
+            background-image: url('blackfond.png');
+            background-size: cover; /* Make the background cover the whole screen */
+            background-repeat: no-repeat; /* Prevent the background from repeating */
+            background-attachment: fixed; /* Make the background fixed during scroll */
+            background-position: center; /* Center the background image */
+            color: #fff; /* Ensure text color remains readable */
+            font-family: 'Arial', sans-serif;
+        }
 
         .navbar, .card-header {
             background-color: #005487;
+            transition: background-color 0.3s;
+        }
+        .card-headero {
+            background-color: #001143;
             transition: background-color 0.3s;
         }
         .card-header-abtme {
@@ -64,12 +67,16 @@
             background-color: #c78c00;
             transition: background-color 0.3s;
         }
+        .card-header-proexp {
+            background-color: #0964a5;
+            transition: background-color 0.3s;
+        }
         .card-header-pw {
             background-color: #007a26;
             transition: background-color 0.3s;
         }
         .card-header-skills {
-            background-color: #001454;
+            background-color: #130750;
             transition: background-color 0.3s;
         }
         .card-header-sft {
@@ -81,11 +88,11 @@
             transition: background-color 0.3s;
         }
         .card-header-lg {
-            background-color: #da0072;
+            background-color: #da5c00;
             transition: background-color 0.3s;
         }
         .card-header-ai {
-            background-color: #4d7c14;
+            background-color: #850e68;
             transition: background-color 0.3s;
         }
         
@@ -254,100 +261,135 @@
         }
 
         .sb-sidenav {
-    background-color: #04182dd9; /* Change this to your desired background color */
-}
+            background-color: #04182dd9; /* Change this to your desired background color */
+        }
 
-.sb-sidenav .nav-link {
-    color: #ECF0F1; /* Change this to your desired text color */
-}
+        .sb-sidenav .nav-link {
+            color: #ECF0F1; /* Change this to your desired text color */
+        }
 
-.sb-sidenav .nav-link:hover {
-    background-color: #34495E; /* Change this to your desired hover background color */
-    color: #ECF0F1; /* Change this to your desired hover text color */
-}
+        .sb-sidenav .nav-link:hover {
+            background-color: #34495E; /* Change this to your desired hover background color */
+            color: #ECF0F1; /* Change this to your desired hover text color */
+        }
 
-.sb-sidenav .sb-sidenav-footer {
-    background-color: #2C3E50; /* Match the footer background color to the sidenav */
-    color: #ECF0F1; /* Match the footer text color to the sidenav */
-}
+        .sb-sidenav .sb-sidenav-footer {
+            background-color: #2C3E50; /* Match the footer background color to the sidenav */
+            color: #ECF0F1; /* Match the footer text color to the sidenav */
+        }
 
+        .card-body {
+    background-color: #2a2a2a;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+}
 .timeline {
     position: relative;
-    max-width: 800px;
     margin: 0 auto;
 }
-
 .timeline-item {
     margin-bottom: 20px;
     padding-left: 40px;
     position: relative;
 }
-
 .timeline-icon {
     position: absolute;
     top: 20px;
     left: 0;
     width: 20px;
     height: 20px;
-    background-color: #238EFF;
+    background-color: #fff;
     border-radius: 50%;
 }
-
 .timeline-content {
     position: relative;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 25px;
+    background-color: #3b3b3b;
+    border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 40px;
+    color: #fff;
+    max-width: calc(100% - 80px);
 }
-
 .timeline-content h3 {
     margin-top: 0;
-    font-size: 1rem;
-    color: #333;
+    font-size: 1.25rem;
+    color: #ffffff;
 }
-
 .timeline-content p {
     margin: 5px 0;
-    color: #666;
+    color: #bbbbbb;
 }
-
 .timeline-content .timeline-date {
     display: block;
     margin-top: 10px;
     font-size: 0.875rem;
-    color: #999;
+    color: #999999;
 }
-
 .timeline-content ul {
     margin-top: 10px;
     padding-left: 1rem;
     list-style-type: disc;
 }
-
 .timeline-content ul li {
     margin: 5px 0;
-    color: #444;
+    color: #cccccc;
 }
-
 @media (min-width: 768px) {
-    .timeline-content h3 {
-        font-size: 1.25rem;
+    .timeline-content {
+        margin-left: 0;
+        padding-left: 40px;
+        max-width: 100%;
     }
-
+    .timeline-content h3 {
+        font-size: 1.5rem;
+    }
     .timeline-content .timeline-date {
         font-size: 1rem;
     }
-
+    .timeline-content ul li {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 768px) {
+    .timeline-content {
+        margin-left: 0;
+        padding-left: 40px;
+        max-width: 100%;
+    }
+    .timeline-content h3 {
+        font-size: 1.5rem;
+    }
+    .timeline-content .timeline-date {
+        font-size: 1rem;
+    }
     .timeline-content ul li {
         font-size: 1rem;
     }
 }
 
-.bg-whitem {
-  --bs-bg-opacity: 1;
-  background-color: rgb(220, 227, 236) !important;
+@media (max-width: 767px) {
+    .timeline-item {
+        padding-left: 20px;
+    }
+    .timeline-content {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 15px;
+    }
+    .timeline-content h3 {
+        font-size: 1rem;
+    }
+    .timeline-content .timeline-date,
+    .timeline-content ul li {
+        font-size: 0.875rem;
+    }
 }
+
+        .bg-whitem {
+            --bs-bg-opacity: 1;
+            background-color: #0b2650  !important;
+        }
 
     </style>
 </head>
@@ -388,6 +430,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-project-diagram"></i></div>
                             Projects
                         </a>
+                        <a class="nav-link" href="#professional-experience" data-scroll-target="professional-experience">
+                            <div class="sb-nav-link-icon"><i class="fas fa-tools"></i></div>
+                            Work Experience
+                        </a>
                         <a class="nav-link" href="#skills" data-scroll-target="skills">
                             <div class="sb-nav-link-icon"><i class="fas fa-laptop-code"></i></div>
                             Hard Skills
@@ -396,6 +442,7 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tools"></i></div>
                             Practical Work
                         </a>
+
                         <a class="nav-link" href="#soft-skills" data-scroll-target="soft-skills">
                             <div class="sb-nav-link-icon"><i class="fas fa-handshake"></i></div>
                             Soft Skills
@@ -433,11 +480,6 @@
                         
                     </div>
                 </div>
-                <!-- <div class="sb-sidenav-footer">
-                    <div class="small">Contact me</div>
-                    +33-783-689-984
-                    taher.karimdjee@groupe-eesigelec.org 
-                </div> -->
             </nav>
         </div>
         <div id="layoutSidenav_content">
@@ -525,10 +567,6 @@
 
                     <!-- <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1d5a58fb-0094-43b1-877c-a22a2fcdcb8e" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script> -->
                     
-                    
-
-
-
                     <div class="card mb-4">
                         <div id="projects" class="card-header card-header-pro scroll-offset">
                             <i class="fas fa-project-diagram me-1"></i>
@@ -554,59 +592,64 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <script>
                         AOS.init();
                     </script>
-                   <section id="professional-experience" class="bg-gray-100 py-12">
-                    <div class="container mx-auto px-4">
-                        <h2 class="text-3xl font-bold mb-8 text-center">Professional Experience</h2>
-                        <div class="timeline">
-                            <div class="timeline-item" data-aos="fade-up">
-                                <div class="timeline-icon"></div>
-                                <div class="timeline-content bg-whitem p-6 md:p-6 rounded-lg shadow-md">
-                                    <h3 class="text-lg md:text-xl font-bold">IT Security Technician Intern</h3>
-                                    <p class="italic">Insia France, Vitry-sur-seine</p>
-                                    <span class="timeline-date text-sm md:text-base">June - August 2024</span>
-                                    <ul class="list-disc list-inside ml-4">
-                                        <li class="text-sm md:text-base">Report writing and documentation</li>
-                                        <li class="text-sm md:text-base">Study and implementation of SIEM</li>
-                                        <li class="text-sm md:text-base">SOC support and maintenance</li>
-                                    </ul>
+
+
+                    <div class="card mb-4">
+                        <div id="professional-experience" class="card-header card-header-proexp scroll-offset">
+                            <i class="fas fa-tools me-1"></i>
+                            Professional Experience
+                        </div>
+                        <div class="card-body">
+                            <div class="timeline">
+                                <div class="timeline-item" data-aos="fade-up">
+                                    <div class="timeline-icon"></div>
+                                    <div class="timeline-content bg-whitem p-6 md:p-6 rounded-lg shadow-md">
+                                        <h3 class="text-lg md:text-xl font-bold">IT Security Technician Intern</h3>
+                                        <p class="italic">Insia France, Vitry-sur-seine</p>
+                                        <span class="timeline-date text-sm md:text-base">June - August 2024</span>
+                                        <ul class="list-disc list-inside ml-4">
+                                            <li class="text-sm md:text-base">Report writing and documentation</li>
+                                            <li class="text-sm md:text-base">Study and implementation of SIEM</li>
+                                            <li class="text-sm md:text-base">SOC support and maintenance</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="timeline-item" data-aos="fade-up">
-                                <div class="timeline-icon"></div>
-                                <div class="timeline-content bg-whitem p-6 md:p-6 rounded-lg shadow-md">
-                                    <h3 class="text-lg md:text-xl font-bold">Pet Store Advisor (Student Job)</h3>
-                                    <p class="italic">Jardinerie Poullain, Le Petit-Quevilly</p>
-                                    <span class="timeline-date text-sm md:text-base">October 2023 - February 2024</span>
-                                    <ul class="list-disc list-inside ml-4">
-                                        <li class="text-sm md:text-base">Responsible for stock, shelves, and animal management</li>
-                                        <li class="text-sm md:text-base">Customer guidance, application of SCRUM methodology</li>
-                                    </ul>
+                                <div class="timeline-item" data-aos="fade-up">
+                                    <div class="timeline-icon"></div>
+                                    <div class="timeline-content bg-whitem p-6 md:p-6 rounded-lg shadow-md">
+                                        <h3 class="text-lg md:text-xl font-bold">Pet Store Advisor (Student Job)</h3>
+                                        <p class="italic">Jardinerie Poullain, Le Petit-Quevilly</p>
+                                        <span class="timeline-date text-sm md:text-base">October 2023 - February 2024</span>
+                                        <ul class="list-disc list-inside ml-4">
+                                            <li class="text-sm md:text-base">Responsible for stock, shelves, and animal management</li>
+                                            <li class="text-sm md:text-base">Customer guidance, application of SCRUM methodology</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="timeline-item" data-aos="fade-up">
-                                <div class="timeline-icon"></div>
-                                <div class="timeline-content bg-whitem p-6 md:p-6 rounded-lg shadow-md">
-                                    <h3 class="text-lg md:text-xl font-bold">Summer Assistant, Bank</h3>
-                                    <p class="italic">Société Générale, Rouen</p>
-                                    <span class="timeline-date text-sm md:text-base">August - September 2023</span>
-                                    <ul class="list-disc list-inside ml-4">
-                                        <li class="text-sm md:text-base">Participation in a data management modernization project for the bank</li>
-                                        <li class="text-sm md:text-base">Data processing and entry, financial report writing</li>
-                                    </ul>
+                                <div class="timeline-item" data-aos="fade-up">
+                                    <div class="timeline-icon"></div>
+                                    <div class="timeline-content bg-whitem p-6 md:p-6 rounded-lg shadow-md">
+                                        <h3 class="text-lg md:text-xl font-bold">Summer Assistant, Bank</h3>
+                                        <p class="italic">Société Générale, Rouen</p>
+                                        <span class="timeline-date text-sm md:text-base">August - September 2023</span>
+                                        <ul class="list-disc list-inside ml-4">
+                                            <li class="text-sm md:text-base">Participation in a data management modernization project for the bank</li>
+                                            <li class="text-sm md:text-base">Data processing and entry, financial report writing</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </section>
-                
-                    
-                    
 
 
+
+
+                    
                     <div class="card mb-4">
                         <div id="skills" class="card-header card-header-skills scroll-offset">
                             <i class="fas fa-laptop-code me-1"></i>
@@ -684,7 +727,6 @@
                         </div>
                     </div>
                     
-
                     <div class="card mb-4">
                         <div id="practical-work" class="card-header card-header-pw scroll-offset">
                             <i class="fas fa-tools me-1"></i>
@@ -697,8 +739,6 @@
                             <p><strong>EBIOS Risk Manager:</strong> Objective: Risk study according to EBIOS. Risk analysis of the information system of an ID renewal (in France).</p>
                         </div>
                     </div>
-
-                    
 
                     <div class="card mb-4">
                         <div id="soft-skills" class="card-header card-header-sft scroll-offset">
@@ -805,8 +845,6 @@
                             <div id="status-message" class="mt-3"></div>
                         </div>
                     </div>
-                    
-
                 </div>
             </main>
             <footer class="py-4 bg-dark mt-auto">
@@ -867,6 +905,5 @@
                 });
         });
     </script>
-    
 </body>
 </html>
